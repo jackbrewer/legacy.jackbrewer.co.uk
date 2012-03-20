@@ -1,0 +1,42 @@
+---
+layout: post
+title: Why Impractical CSS Experiments Are Useful
+---
+
+<p>Lots of people have <a href="http://lab.jeffbatterton.com/iphone-css3/" title="Jeff Batterton - CSS3 iPhone">made</a>
+	<a href="https://developer.mozilla.org/en-US/demos/detail/the-letter-heads/launch" title="Simurai - The Letter-Heads">lots</a> <a href="http://neography.com/experiment/circles/solarsystem/" title="Alex Giron - Solar System">of</a> <a href="http://www.alessioatzeni.com/mac-osx-lion-css3/" title="Alessio Atzeni - Mac OS X">amazing</a> <a href="http://www.zurb.com/playground/css-boxshadow-experiments" title="Zurb - Shadow Experiments">things</a> with CSS, using new techniques in HTML5 and CSS3 to push boundaries and explore new possibilities. Many of these demos are incredibly impractical for use in client projects and because of this, have faced criticism from some members of the web community.</p>
+<p>Often incredibly unsemantic HTML is the only way to create incredibly beautiful CSS effects. Use of multiple levels of nested divs and countless empty elements promote bad HTML practices. I think the more successful demos are often the ones which manage to do more with less.</p>
+<p>Whenever I think up a crazy CSS idea I'd like to try out, I'll always write my optimal HTML first. While restricting, this allows me to create something that is more likely to have real-world uses in the (hopefully not too distant) future. It also means I have to think very carefully about the techniques I use to make sure no line of code is added without good reason. If I need to, I'll allow myself some flexibility &mdash; adding a <code>&lt;span&gt;</code> inside an <code>&lt;a&gt;</code> tag is not the end of the world. If I need more than that, I'll often discard the idea as impractical.</p>
+
+<h2>An Example</h2>
+<p>At <a href="http://www.clock.co.uk">Clock</a>, we have lots of posters dotted around the office. One that immediately grabbed my attention was <a href="http://www.timfishlock.com/work.php?workID=12">'Shapeset' by Tim Fishlock</a> (ours is not from the original print-run so colours and layout vary slightly). The geometric shapes and bold semi-transparent colours screamed CSS demo so off I went to try it out.</p>
+<p>My first step was to write my HTML.</p>
+<pre class="prettyprint"><code class="html">&lt;ul class="alphabet"&gt;
+  &lt;li class="a"&gt;A&lt;/li&gt;
+  &lt;li class="b"&gt;B&lt;/li&gt;
+  &hellip;
+&lt;/ul&gt;</code></pre>
+<p>Seems simple enough, now to start thinking about the CSS. Straight away it's clear that we can rely on <code>border-radius</code> and <code>rgba</code> background colours to do a lot of the work. This means IE8 and lower are out of the window. To create some of the more comlicated letters, such as the <em>C</em> and <em>S</em>, a bit of CSS3 rotation is needed &mdash; this works in IE9.</p>
+<p>Another important thing to notice is that no letter is made up of more than 3 geomertic shapes. This means we can get away with styling each <code>&lt;li&gt;</code>, along with it's <code>:before</code> and <code>:after</code> pseudo-element to create each letter &mdash; no extra markup required.</p>
+
+
+
+
+
+
+<h2>Notes - ignore</h2>
+
+<p>
+contradicting? Why Impractical CSS Experiments Are Useful for Learning?
+lots of people hate them
+They are a really good learning experience
+My demo
+What did i learn from it - pseudo elements, positioning?, rgba, css shapes, analytical thinking.
+Not practical but still useful
+not practical for use on actual work
+Help yourself
+- start with good html
+- use all prefixes
+- consider fallbacks
+If you do all these, you may be able to implement in future
+</p>

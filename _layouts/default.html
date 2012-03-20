@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<!--
+
+		Welcome to my website. If you are reading this then I'm guessing you're curious
+		about how things have been done around here. I've tried to keep the source tidy
+		and well commented so feel free to poke around.
+
+		If you've got any questions or comments:
+		twitter.com/jackbrewer
+		github.com/jackbrewer
+
+		Enjoy!
+		Jack.
+
+		 -->
+
+		<title>Jack Brewer - Perfect pixels and awesome code</title>
+
+		<meta charset="utf-8" />
+		<meta name="description" content="Jack Brewer - Perfect pixels and awesome code" />
+		<meta name="keywords"    content="" />
+		<meta name="author"      content="Jack Brewer - http://jackbrewer.co.uk">
+		<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+		<!-- Quick fix so IE can join the HTML5 party -->
+		<script>
+			document.createElement('article');
+			document.createElement('aside');
+			document.createElement('footer');
+			document.createElement('header');
+			document.createElement('hgroup');
+			document.createElement('nav');
+			document.createElement('section');
+			document.createElement('time');
+		</script>
+
+		<link rel="shortcut icon" href="/resource/images/favicon.ico" />
+		<link rel="apple-touch-icon-precomposed" href="/resource/images/apple-touch-icon-precomposed.png" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="/resource/css/base.css" />
+		<link rel="stylesheet" href="/resource/css/layout.css" />{% if paginator.posts %}
+		<!-- Post Specific Style -->{% for post in paginator.posts %}
+		<link rel="stylesheet" href="/assets{{post.url}}css/header.css" />{% if post.stylesheets %}{% for stylesheet in post.stylesheets %}
+		<link rel="stylesheet" href="/assets{{post.url}}css/{{stylesheet}}" />{% endfor %}{% endif %}{% endfor %}{% elsif page.url %}
+		<!-- Page Specific Style -->
+		<link rel="stylesheet" href="/assets{{page.url}}css/header.css" />{% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
+		<link rel="stylesheet" href="/assets{{page.url}}css/{{stylesheet}}" />{% endfor %}{% endif %}{% endif %}
+		<link rel="stylesheet" href="/resource/js/google-code-prettify/prettify.css" />
+		<!-- Google Fonts API -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body class="home">
+		<div id="container">
+
+			<!-- Header -->
+			<div class="header-wrapper">
+				<header id="main-header" role="banner">
+					<h1><a href="/">Jack Brewer</a></h1>
+					<ul class="nav-social">
+						<li class="nav-github"><a href="https://github.com/jackbrewer">GitHub</a></li>
+						<li class="nav-twitter"><a href="https://twitter.com/jackbrewer">Twitter</a></li>
+					</ul>
+				<!-- A TEMPORARY Internet Explorer notice -->
+				<!--[if lt IE 9]>
+					<p class="notification">Hi Internet Explorer user. I haven't completely forgotten about you but until I get time to hack my lovely site for your awful browser, things may look a bit strange. If you want to try a better browser, there are <a href="http://browsehappy.com/">lots to choose from</a>. Thanks, Jack.</p>
+				<![endif]-->
+				</header>
+
+			</div>
+
+{{ content }}
+
+			<footer id="main-footer">
+				<p>&copy; 2012 Jack Brewer</p>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="/resource/js/google-code-prettify/prettify.js"></script>
+		<script src="/resource/js/google-code-prettify/lang-css.js"></script>
+		<script>
+			(function(){
+				prettyPrint();
+			})();
+		</script>{% if paginator.posts %}{% for post in paginator.posts %}{% if post.scripts %}
+		<!-- Post Specific Script -->{% for script in post.scripts %}
+		<script src="/assets{{post.url}}js/{{script}}"></script>{% endfor %}{% endif %}{% endfor %}{% elsif page.url %}
+		<!-- Page Specific Script -->{% if page.scripts %}{% for script in page.scripts %}
+		<script src="/assets{{page.url}}js/{{script}}"></script>{% endfor %}{% endif %}{% endif %}
+		<!-- Google Analytics -->
+		<script>
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-18082762-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,20 @@
+/* OSX Cursors PSD */
+#why-impratical-css-experiments-are-useful header {
+	background-image: url('../images/alphabet.gif');
+	background-position: 50% 0%;
+	-webkit-transition: background-position .6s ease;
+	   -moz-transition: background-position .6s ease;
+	    -ms-transition: background-position .6s ease;
+	     -o-transition: background-position .6s ease;
+	        transition: background-position .6s ease;
+}
+
+#why-impratical-css-experiments-are-useful:hover header {
+	background-position: 50% 100%;
+}
+
+@media only screen and (max-width: 480px) {
+	#why-impratical-css-experiments-are-useful header {
+		background-size: 100% auto;
+	}
+}

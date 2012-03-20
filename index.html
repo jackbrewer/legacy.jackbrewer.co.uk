@@ -1,0 +1,36 @@
+---
+layout: default
+title : Posts
+---
+
+			<section id="posts">
+				{% for post in paginator.posts %}
+				<!-- {{ post.title }} -->
+				<article id="{{ post.url | remove: '/' }}">
+					<header>
+						<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+						<time datetime="{{ post.date | date: "%d-%m-%Y" }}">{{ post.date | date: "%A %d %B %Y" }}</time>
+					</header>
+					<div class="post-content">
+
+{{ post.content }}
+
+					</div><!-- .post-content -->
+				</article>
+				{% endfor %}
+				<nav class="pagination">
+					<ul>{% if paginator.previous_page %}
+						<li class="newer">{% if paginator.previous_page == 1 %}
+							<a class="button" href="/" title="Previous Page">Newer</a>{% else %}
+							<a class="button" href="/page{{ paginator.previous_page }}/" title="Previous Page">Newer</a>{% endif %}
+						</li>{% endif %}
+						<li class="archive">
+							<a class="button" href="/archive/">Archive</a>
+						</li>{% if paginator.next_page %}
+						<li class="older">
+							<a class="button" href="/page{{ paginator.next_page }}/" title="Next Page">Older</a>
+						</li>{% endif %}
+					</ul>
+				</nav>
+
+			</section>

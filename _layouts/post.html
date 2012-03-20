@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+			<section id="post">
+
+				<!-- {{ page.title }} -->
+				<article id="{{ page.url | remove: '/' }}">
+					<header>
+						<h1><span>{{ page.title }}</span></h1>
+						<time datetime="{{ page.date | date: "%d-%m-%Y" }}">{{ page.date | date: "%A %d %B %Y" }}</time>
+					</header>
+					<div class="post-content">
+
+{{ page.content }}
+
+					</div><!-- .post-content -->
+				</article>
+
+				<nav class="pagination">
+					<ul>{% if page.next.url %}
+						<li class="newer">
+							<a class="button" href="{{page.next.url}}" title="Newer Post: {{page.next.title}}">{{page.next.title}}</a>
+						</li>{% endif %}
+						<li class="archive">
+							<a class="button" href="/archive/">Archive</a>
+						</li>{% if page.previous.url %}
+						<li class="older">
+							<a class="button" href="{{page.previous.url}}" title="Older Post: {{page.previous.title}}">{{page.previous.title}}</a>
+						</li>{% endif %}
+					</ul>
+				</nav>
+
+			</section>

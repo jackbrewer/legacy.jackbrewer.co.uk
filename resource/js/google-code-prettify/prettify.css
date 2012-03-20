@@ -1,0 +1,87 @@
+article style {
+	display: block;
+	white-space: pre;
+	background: #FFF;
+	color: #555;
+	padding: 15px;
+	margin: 30px 0;
+	outline: none;
+	border-radius: 3px;
+	width: 50%;
+	margin: 30px auto;
+	-webkit-box-shadow: 0px 0px 4px #BCBCBC inset;
+	   -moz-box-shadow: 0px 0px 4px #BCBCBC inset;
+	    -ms-box-shadow: 0px 0px 4px #BCBCBC inset;
+	     -o-box-shadow: 0px 0px 4px #BCBCBC inset;
+	        box-shadow: 0px 0px 4px #BCBCBC inset;
+	-webkit-transition: all 0.6s ease;
+	   -moz-transition: all 0.6s ease;
+	    -ms-transition: all 0.6s ease;
+	     -o-transition: all 0.6s ease;
+	        transition: all 0.6s ease;
+}
+
+article style:focus {
+	color: #333;
+	background-color: #f5f5f5;
+	-webkit-box-shadow: 0px 0px 6px #999 inset;
+	   -moz-box-shadow: 0px 0px 6px #999 inset;
+	    -ms-box-shadow: 0px 0px 6px #999 inset;
+	     -o-box-shadow: 0px 0px 6px #999 inset;
+	        box-shadow: 0px 0px 6px #999 inset;
+}
+
+
+
+.prettyprint ::-moz-selection {
+	background-color: #95999c;
+	color: inherit;
+}
+
+.prettyprint ::selection {
+	background-color: #95999c;
+	color: inherit;
+}
+
+.prettyprint {
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	background:#141414;
+	color:#f8f8f8;
+	max-width: 100%;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+pre code {
+	padding: 10px 0px 10px 19px;
+	margin-left: 0px;
+	border-left: 1px dotted #363636;
+	display: block;
+}
+
+/* Defaults */
+.prettyprint .str {color:#8f9d6a;} /* Any CSS in quotes */
+.prettyprint .atv {color:#8f9d6a;} /* Any HTML in quotes */
+.prettyprint .kwd {color:#cda869;} /* Not sure - matched 'no' and 'inline' */
+.prettyprint .pun {color:#f8f8f8;} /* Punctuation, brackets */
+.prettyprint .com {color:#5f5a60; font-style:italic;} /* Comments */
+.prettyprint .typ {color:#cf6b4c;} /* Any capitalised words?! used in font name values */
+.prettyprint .lit {color:#c9773f;} /* Numbers (and sometimes their values) */
+.prettyprint .pln {color:#f8f8f8;} /* General Text */
+.prettyprint .tag {color:#ab885a;} /* HTML tags */
+.prettyprint .atn {color:#e0c589;} /* HTML attribute names */
+.prettyprint .dec {color:#494949;} /* DOCTYPE */
+
+/* Extras */
+.prettyprint .css .pln {color:#cda869;}  /* Most text - selectors and properties */
+.prettyprint .html .pun {color:#e0c589;} /* matches colour of '=' to attribute name */
+
+.prettyprint .plain span {color: #f8f8f8;}
+.prettyprint .plain span.com {color: #5f5a60;}
