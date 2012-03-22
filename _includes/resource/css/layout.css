@@ -1,0 +1,165 @@
+/*
+ * layout.css
+ * Styles elements common to all pages
+ * ===================================
+ */
+
+#container {
+	position: relative;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 120px 2% 60px;
+}
+
+/* White page fade overlays */
+.header-wrapper:after,
+#container:after {
+	content: "";
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 40px;
+	pointer-events: none;
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.6));
+	background-image:    -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.6));
+	background-image:     -ms-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.6));
+	background-image:      -o-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.6));
+	background-image:         linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.6));
+}
+
+.header-wrapper:after {
+	position: absolute;
+	bottom: -10px;
+	height: 10px;
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	background-image:    -moz-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	background-image:     -ms-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	background-image:      -o-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	background-image:         linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+}
+
+/*--------
+	Header
+----------*/
+
+.header-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background-color: #FFF;
+}
+
+#main-header {
+	padding: 0 20px;
+	position: relative;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#main-header h1 {
+	border-bottom: 1px dotted #bbb;
+	position: relative;
+	margin-bottom: 0;
+	padding-left: 4%;
+	font-size: 1.6em;
+}
+#main-header h1 a {
+	display: inline-block;
+	padding: 0.6em 0;
+	color: #aaa;
+	text-transform: uppercase;
+}
+#main-header h1 a:hover {
+	color: #20a5ba;
+}
+
+#main-header .notification {
+	padding: 4px 10px;
+	background-color: #da4b3d;
+	margin-bottom: 0;
+	color: #fff;
+	border-bottom: 1px solid #c62a28;
+}
+
+#main-header .notification a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+/* Social Links */
+.nav-social {
+	position: absolute;
+	top: 14px;
+	right: 6%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: auto;
+}
+.nav-social li,
+.nav-social a {
+	background-image: url("../images/sprite.png");
+	background-repeat: no-repeat;
+	background-size: 160px auto;
+}
+.nav-social li {
+	float: left;
+	padding: 0;
+	margin: 0 0 0 20px;
+	list-style: none;
+}
+.nav-social a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: #CCC;
+	text-indent: -9999px;
+	outline: 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease;
+	   -moz-transition: opacity 0.5s ease;
+	    -ms-transition: opacity 0.5s ease;
+	     -o-transition: opacity 0.5s ease;
+	        transition: opacity 0.5s ease;
+}
+.nav-social a:hover {
+	opacity: 1;
+	-webkit-transition: opacity 0.2s ease;
+	   -moz-transition: opacity 0.2s ease;
+	    -ms-transition: opacity 0.2s ease;
+	     -o-transition: opacity 0.2s ease;
+	        transition: opacity 0.2s ease;
+}
+
+.nav-social .nav-github {
+	background-position: 0px 0px;
+}
+.nav-social .nav-github a {
+	background-position: -40px 0px;
+}
+.nav-social .nav-twitter {
+	background-position: -80px 0px;
+}
+.nav-social .nav-twitter a {
+	background-position: -120px 0px;
+}
+
+/*--------
+	Footer
+----------*/
+
+#main-footer {
+	clear: left;
+	color: #555;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+#main-footer p {
+	margin: 0 14% 0 0;
+	padding: 0 4%;
+}

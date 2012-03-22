@@ -1,0 +1,188 @@
+/*
+ * global.css
+ * Styles generic elements which appear on some pages
+ * but are not part of the site layout
+ * ==================================================
+ */
+
+/*---------
+	Buttons
+-----------*/
+
+.button {
+	position: relative;
+	display: inline-block;
+	background-color: #aaa;
+	border-radius: 1px;
+	color: #444;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	-webkit-transition: background-color .4s ease;
+	   -moz-transition: background-color .4s ease;
+	    -ms-transition: background-color .4s ease;
+	     -o-transition: background-color .4s ease;
+	        transition: background-color .4s ease;
+}
+
+.button:not(.disabled):hover {
+	background-color: #777;
+	-webkit-transition: background-color .2s ease;
+	   -moz-transition: background-color .2s ease;
+	    -ms-transition: background-color .2s ease;
+	     -o-transition: background-color .2s ease;
+	        transition: background-color .2s ease;
+}
+
+.button.disabled {
+	background-color: #d9d9d9;
+	pointer-events: none;
+}
+
+/* Button Icons */
+
+.button.download {
+	padding-right: 36px;
+}
+
+.button.download:before,
+.button.download:after {
+	content: "";
+	position: absolute;
+	display: block;
+}
+
+.button.download:before {
+	top: 50%;
+	right: 18px;
+	height: 8px;
+	width: 2px;
+	margin-top: -5px;
+	background-color: #444;
+}
+
+.button.download:after {
+	top: 50%;
+	right:15px;
+	width: 0;
+	height: 0;
+	margin-top: 2px;
+	border-style: solid;
+	border-width: 4px 4px 0;
+	border-color: #444 transparent transparent;
+}
+
+
+/*------------
+	Pagination
+--------------*/
+
+.pagination {
+	margin: 0 14% 0 0;
+	padding: 0 4% 20px;
+}
+
+.pagination ul {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto 60px;
+	text-align: center;
+	padding: 0;
+}
+
+.pagination li {
+	position: absolute;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.pagination li .button {
+	display: block;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.pagination .newer {
+	left: -60px;
+}
+
+.pagination .older {
+	left: 60px;
+}
+
+.pagination .newer .button:after,
+.pagination .older .button:after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 15px 30px 15px 0;
+	border-color: transparent #fff transparent transparent;
+}
+
+.pagination .older .button:after {
+	border-width: 15px 0 15px 30px;
+	border-color: transparent transparent transparent #fff;
+}
+
+.pagination .archive {
+	left: 0;
+}
+
+.pagination .archive .button:before,
+.pagination .archive .button:after {
+	content: "";
+	position: absolute;
+	top: 11px;
+	left: 10px;
+	width: 30px;
+	height: 4px;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 4px 0;
+}
+
+.pagination .archive .button:after {
+	top: 27px;
+}
+
+/*-------------
+	Error Pages
+---------------*/
+
+#error-404 header {
+	background-color: #000;
+}
+
+#error-404 header:before {
+	content: "404";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: #222;
+	font-size: 300px;
+	line-height: 340px;
+	font-weight: 400;
+	-webkit-transition: color .4s ease;
+	   -moz-transition: color .4s ease;
+	    -ms-transition: color .4s ease;
+	     -o-transition: color .4s ease;
+	        transition: color .4s ease;
+}
+
+#error-404:hover header:before {
+	color: #fff;
+}

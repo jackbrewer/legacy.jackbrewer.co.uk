@@ -1,0 +1,116 @@
+/*
+ * media.css
+ * Contains media query styles for tablet and phone size screens
+ * =============================================================
+ */
+
+/*---------------------------
+	Portrait iPad and smaller
+-----------------------------*/
+
+@media only screen and (max-width: 768px) {
+
+	#container,
+	#main-header {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.header-wrapper {
+		position: absolute;
+	}
+
+	.nav-social li {
+		margin-left: 5px;
+	}
+
+	article header {
+		height: 330px;
+	}
+
+	article header h1 {
+		font-size: 1.875em;
+		margin-top: 270px;
+	}
+
+	article .post-content,
+	.pagination,
+	#main-footer p {
+		margin-right: 0;
+	}
+
+	article .post-content {
+		margin-bottom: 40px;
+		padding-bottom: 10px;
+	}
+
+	#error-404 header:before {
+		font-size: 230px;
+		line-height: 270px;
+	}
+
+}
+
+
+/*------------------------------
+	Landscape iPhone and smaller
+--------------------------------*/
+
+@media only screen and (max-width: 480px) {
+
+	#container {
+		padding-bottom: 20px;
+	}
+
+	.header-wrapper:after,
+	#container:after {
+		display: none;
+	}
+
+	article header {
+		height: 200px;
+	}
+
+	article header h1 {
+		font-size: 1.875em;
+		margin-top: 170px;
+	}
+
+	article header h1:before,
+	article header h1:after {
+		display: none;
+	}
+
+	article header h1 a,
+	article header h1 span {
+		margin-right: 0;
+	}
+
+	.pagination ul {
+		margin-bottom: 20px;
+	}
+
+	#archive li {
+		margin-bottom: 1em;
+	}
+
+	#archive time {
+		float: none;
+		width: auto;
+		font-size: 0.875em;
+	}
+
+	#archive time span {
+		font-size: 1em;
+	}
+
+	#archive h2 {
+		font-size: 1.875em;
+	}
+
+	#error-404 header:before {
+		font-size: 140px;
+		line-height: 170px;
+	}
+
+}

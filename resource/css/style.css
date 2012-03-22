@@ -1,0 +1,20 @@
+---
+layout: nil
+---
+
+/*
+ This file contains multiple aggregated files
+ Individual files can be found in the _includes folder on GitHub
+ */
+
+{% include resource/css/base.css %}
+
+{% include resource/css/layout.css %}
+
+{% include resource/css/global.css %}
+
+{% include resource/css/posts.css %}
+
+{% include resource/css/archive.css %}
+
+{% include resource/css/media.css %}
