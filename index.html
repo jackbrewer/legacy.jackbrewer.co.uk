@@ -19,17 +19,28 @@ title : Posts
 				</article>
 				{% endfor %}
 				<nav class="pagination">
-					<ul>{% if paginator.previous_page %}
-						<li class="newer">{% if paginator.previous_page == 1 %}
-							<a class="button" href="/" title="Previous Page">Newer</a>{% else %}
-							<a class="button" href="/page{{ paginator.previous_page }}/" title="Previous Page">Newer</a>{% endif %}
-						</li>{% endif %}
+					<ul>
+						<li class="newer">
+						{% if paginator.previous_page == 1 %}
+							{% if paginator.previous_page %}
+								<a class="button" href="/" title="Newer Posts">Newer Posts</a>
+							{% else %}
+								<a class="button" href="/page{{ paginator.previous_page }}/" title="Previous Page">Newer</a>
+							{% endif %}
+						{% else %}
+							<span class="button disabled">No Newer Posts</span>
+						{% endif %}
+						</li>
 						<li class="archive">
 							<a class="button" href="/archive/">Archive</a>
-						</li>{% if paginator.next_page %}
+						</li>
 						<li class="older">
+						{% if paginator.next_page %}
 							<a class="button" href="/page{{ paginator.next_page }}/" title="Next Page">Older</a>
-						</li>{% endif %}
+						{% else %}
+							<span class="button disabled">No Older Posts</span>
+						{% endif %}
+						</li>
 					</ul>
 				</nav>
 

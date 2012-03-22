@@ -18,16 +18,24 @@ layout: default
 				</article>
 
 				<nav class="pagination">
-					<ul>{% if page.next.url %}
+					<ul>
 						<li class="newer">
+							{% if page.next.url %}
 							<a class="button" href="{{page.next.url}}" title="Newer Post: {{page.next.title}}">{{page.next.title}}</a>
-						</li>{% endif %}
+							{% else %}
+							<span class="button disabled">No Newer Posts</span>
+							{% endif %}
+						</li>
 						<li class="archive">
 							<a class="button" href="/archive/">Archive</a>
-						</li>{% if page.previous.url %}
+						</li>
 						<li class="older">
+							{% if page.previous.url %}
 							<a class="button" href="{{page.previous.url}}" title="Older Post: {{page.previous.title}}">{{page.previous.title}}</a>
-						</li>{% endif %}
+							{% else %}
+							<span class="button disabled">No Older Posts</span>
+							{% endif %}
+						</li>
 					</ul>
 				</nav>
 
