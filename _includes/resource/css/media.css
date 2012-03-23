@@ -67,6 +67,15 @@
 		display: none;
 	}
 
+	.float-left,
+	.float-right {
+		float: none;
+	}
+
+	[class*="col-"] {
+		width: 100%;
+	}
+
 	article header {
 		height: 200px;
 	}
