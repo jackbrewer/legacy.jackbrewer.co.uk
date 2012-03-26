@@ -5,12 +5,13 @@
  */
 
 #archive {
-	padding: 0 4% 60px;
+	padding: 0 0 60px;
 }
 
 #archive li {
 	list-style: none;
 	margin-bottom: 1.5em;
+	margin-left: 120px;
 }
 
 #archive time {

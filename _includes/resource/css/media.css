@@ -16,14 +16,6 @@
 		padding-right: 0;
 	}
 
-	.header-wrapper {
-		position: absolute;
-	}
-
-	.nav-social li {
-		margin-left: 5px;
-	}
-
 	article header {
 		height: 330px;
 	}
@@ -33,15 +25,10 @@
 		margin-top: 270px;
 	}
 
-	article .post-content,
-	.pagination,
-	#main-footer p {
-		margin-right: 0;
-	}
-
 	article .post-content {
 		margin-bottom: 40px;
 		padding-bottom: 10px;
+		margin-right: 20px;
 	}
 
 	#error-404 header:before {
@@ -60,11 +47,44 @@
 
 	#container {
 		padding-bottom: 20px;
+		padding-top: 10px;
 	}
 
-	.header-wrapper:after,
 	#container:after {
 		display: none;
+	}
+
+	#main-header {
+		position: static;
+		margin-bottom: 20px;
+		margin-left: 10px;
+		width: auto;
+		height: 66px;
+	}
+
+	#main-header:hover {
+		height: 66px;
+	}
+
+	#main-header h1 {
+		float: left;
+		font-size: 12px;
+		line-height: 14px;
+		background-size: 66px auto;
+	}
+
+	#main-header h1 a {
+		width: 66px;
+		height: 66px;
+		padding-top: 32px;
+	}
+
+	#main-header nav {
+		float: left;
+		position: static;
+		display: block;
+		margin-top: 0;
+		margin-left: 2px;
 	}
 
 	.float-left,
@@ -73,7 +93,7 @@
 	}
 
 	[class*="col-"] {
-		width: 100%;
+		width: auto;
 	}
 
 	article header {
@@ -93,6 +113,18 @@
 	article header h1 a,
 	article header h1 span {
 		margin-right: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	article header time {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	article .post-content {
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 
 	.pagination ul {
@@ -101,6 +133,7 @@
 
 	#archive li {
 		margin-bottom: 1em;
+		margin-left: 10px;
 	}
 
 	#archive time {

@@ -8,11 +8,10 @@
 	position: relative;
 	max-width: 960px;
 	margin: 0 auto;
-	padding: 120px 2% 60px;
+	padding: 20px 20px 60px;
 }
 
 /* White page fade overlays */
-.header-wrapper:after,
 #container:after {
 	content: "";
 	position: fixed;
@@ -29,96 +28,132 @@
 	background-image:         linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.6));
 }
 
-.header-wrapper:after {
-	position: absolute;
-	bottom: -10px;
-	height: 10px;
-	background-image: -webkit-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
-	background-image:    -moz-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
-	background-image:     -ms-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
-	background-image:      -o-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
-	background-image:         linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
-}
 
 /*--------
 	Header
 ----------*/
 
-.header-wrapper {
+#main-header {
 	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
+	top: 20px;
+	left: auto;
 	z-index: 10;
-	background-color: #FFF;
+	width: 100px;
+	height: 100px;
+	margin: 2px;
+	-webkit-transition: height 0.2s ease;
+	   -moz-transition: height 0.2s ease;
+	    -ms-transition: height 0.2s ease;
+	     -o-transition: height 0.2s ease;
+	        transition: height 0.2s ease;
 }
 
-#main-header {
-	padding: 0 20px;
-	position: relative;
-	max-width: 960px;
-	margin: 0 auto;
+#main-header:hover {
+	height: 170px;
 }
 
 #main-header h1 {
-	border-bottom: 1px dotted #bbb;
+	margin-bottom: 0;
+	font-size: 20px;
+	line-height: 22px;
+	background-image: url("../images/jb-logo.png");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: 100px auto;
 	position: relative;
-	margin-bottom: 0;
-	padding-left: 4%;
-	font-size: 1.6em;
+	z-index:1;
 }
+
 #main-header h1 a {
-	display: inline-block;
-	padding: 0.6em 0;
-	color: #aaa;
+	color: #fff;
 	text-transform: uppercase;
-}
-#main-header h1 a:hover {
-	color: #20a5ba;
+	height: 100px;
+	padding-top: 48px;
+	padding-bottom: 8px;
+	display: block;
+	padding-left: 8px;
+	font-weight: 400;
+	overflow: hidden;
+	width: 100px;
+	opacity: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-transition: opacity 0.2s ease;
+	   -moz-transition: opacity 0.2s ease;
+	    -ms-transition: opacity 0.2s ease;
+	     -o-transition: opacity 0.2s ease;
+	        transition: opacity 0.2s ease;
 }
 
-#main-header .notification {
-	padding: 4px 10px;
-	background-color: #da4b3d;
-	margin-bottom: 0;
-	color: #fff;
-	border-bottom: 1px solid #c62a28;
+/*#main-header:hover h1 a,*/
+#main-header h1 a.active {
+	opacity: 1 !important;
 }
 
-#main-header .notification a {
-	color: #fff;
-	text-decoration: underline;
-}
 
-/* Social Links */
-.nav-social {
+/*------------
+	Navigation
+--------------*/
+
+#main-header nav {
 	position: absolute;
-	top: 14px;
-	right: 6%;
+	margin-top: 2px;
+	bottom: 0px;
+	left: 0;
+	z-index: 0;
+}
+
+#main-header ul {
 	padding: 0;
 	margin: 0;
-	list-style: none;
-	width: auto;
 }
-.nav-social li,
-.nav-social a {
-	background-image: url("../images/sprite.png");
-	background-repeat: no-repeat;
-	background-size: 160px auto;
-}
-.nav-social li {
+
+#main-header li {
 	float: left;
 	padding: 0;
-	margin: 0 0 0 20px;
-	list-style: none;
+	margin: 0 2px 2px 0;
+	background-color: #fff;
 }
-.nav-social a {
+
+#main-header li:nth-child(3n) {
+	margin-right: 0;
+}
+
+#main-header li a,
+#main-header li span {
+	position: relative;
 	display: block;
-	width: 40px;
-	height: 40px;
-	background-color: #CCC;
-	text-indent: -9999px;
-	outline: 0;
+	width: 32px;
+	height: 32px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #bbb;
+}
+
+#main-header li a {
+	opacity: 0.6;
+}
+
+#main-header li a:hover {
+	opacity: 1;
+}
+
+#main-header .button.disabled {
+	opacity: 0.2;
+}
+
+#main-header .nav-social li,
+#main-header .nav-social a {
+	background-image: url("../images/sprite2.png");
+	background-repeat: no-repeat;
+	background-size: 96px auto;
+}
+
+#main-header .nav-social a {
 	opacity: 0;
 	-webkit-transition: opacity 0.5s ease;
 	   -moz-transition: opacity 0.5s ease;
@@ -126,7 +161,8 @@
 	     -o-transition: opacity 0.5s ease;
 	        transition: opacity 0.5s ease;
 }
-.nav-social a:hover {
+
+#main-header .nav-social a:hover {
 	opacity: 1;
 	-webkit-transition: opacity 0.2s ease;
 	   -moz-transition: opacity 0.2s ease;
@@ -136,16 +172,22 @@
 }
 
 .nav-social .nav-github {
-	background-position: 0px 0px;
+	background-position: 0px -32px;
 }
 .nav-social .nav-github a {
-	background-position: -40px 0px;
+	background-position: 0px 0px;
 }
 .nav-social .nav-twitter {
-	background-position: -80px 0px;
+	background-position: -32px -32px;
 }
 .nav-social .nav-twitter a {
-	background-position: -120px 0px;
+	background-position: -32px 0px;
+}
+.nav-social .nav-rss {
+	background-position: -64px -32px;
+}
+.nav-social .nav-rss a {
+	background-position: -64px 0px;
 }
 
 /*--------
@@ -160,6 +202,6 @@
 }
 
 #main-footer p {
-	margin: 0 14% 0 0;
-	padding: 0 4%;
+	margin: 0 0;
+	padding: 0 120px;
 }

@@ -57,20 +57,17 @@
 		<div id="container">
 
 			<!-- Header -->
-			<div class="header-wrapper">
-				<header id="main-header" role="banner">
-					<h1><a href="/">Jack Brewer</a></h1>
+			<header id="main-header">
+				<h1><a href="/">Jack Brewer</a></h1>
+				<nav>
+{% include content/pagination.html %}
 					<ul class="nav-social">
-						<li class="nav-github"><a href="https://github.com/jackbrewer">GitHub</a></li>
-						<li class="nav-twitter"><a href="https://twitter.com/jackbrewer">Twitter</a></li>
+						<li class="nav-github"><a href="https://github.com/jackbrewer" title="GitHub">GitHub</a></li>
+						<li class="nav-twitter"><a href="http://twitter.com/jackbrewer" title="Twitter">Twitter</a></li>
+						<li class="nav-rss"><a href="/feed/index.xml" title="RSS">RSS</a></li>
 					</ul>
-				<!-- A TEMPORARY Internet Explorer notice -->
-				<!--[if lt IE 9]>
-					<p class="notification">Hi Internet Explorer user. I haven't completely forgotten about you but until I get time to hack my lovely site for your awful browser, things may look a bit strange. If you want to try a better browser, there are <a href="http://browsehappy.com/">lots to choose from</a>. Thanks, Jack.</p>
-				<![endif]-->
-				</header>
-
-			</div>
+				</nav>
+			</header>
 
 {{ content }}
 

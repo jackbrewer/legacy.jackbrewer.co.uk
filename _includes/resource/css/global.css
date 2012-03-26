@@ -31,7 +31,7 @@
 	Buttons
 -----------*/
 
-.button {
+section .button {
 	position: relative;
 	display: inline-block;
 	background-color: #aaa;
@@ -49,7 +49,7 @@
 	        transition: background-color .4s ease;
 }
 
-.button:not(.disabled):hover {
+section .button:not(.disabled):hover {
 	color: #fff;
 	background-color: #777;
 	-webkit-transition: background-color .2s ease;
@@ -59,14 +59,14 @@
 	        transition: background-color .2s ease;
 }
 
-.button.disabled {
+section .button.disabled {
 	background-color: #d9d9d9;
 	pointer-events: none;
 }
 
 /* Button Icons */
 
-[class*="icon-"] {
+section [class*="icon-"] {
 	padding-right: 40px;
 }
 
@@ -145,7 +145,6 @@
 }
 
 /* Source */
-
 .icon-source:before,
 .icon-source:after {
 	-webkit-transform: rotate(-26.6deg);
@@ -183,53 +182,9 @@
 	margin-right: 1px;
 }
 
-
-/*------------
-	Pagination
---------------*/
-
-.pagination {
-	margin: 0 14% 0 0;
-	padding: 0 4% 20px;
-}
-
-.pagination ul {
-	position: relative;
-	width: 50px;
-	height: 50px;
-	margin: 0 auto 60px;
-	text-align: center;
-	padding: 0;
-}
-
-.pagination li {
-	position: absolute;
-	top: 0;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.pagination li .button {
-	display: block;
-	width: 50px;
-	height: 50px;
-	padding: 0;
-	text-indent: 100%;
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-.pagination .newer {
-	left: -60px;
-}
-
-.pagination .older {
-	left: 60px;
-}
-
-.pagination .newer .button:after,
-.pagination .older .button:after {
+/* Newer / Older */
+.icon-newer:after,
+.icon-older:after {
 	content: "";
 	position: absolute;
 	top: 10px;
@@ -241,17 +196,28 @@
 	border-color: transparent #fff transparent transparent;
 }
 
-.pagination .older .button:after {
+.icon-older:after {
 	border-width: 15px 0 15px 30px;
 	border-color: transparent transparent transparent #fff;
 }
 
-.pagination .archive {
-	left: 0;
+#main-header .icon-newer:after {
+	top: 8px;
+	left: 8px;
+	border-width: 8px 16px 8px 0;
+	border-color: transparent #888 transparent transparent;
 }
 
-.pagination .archive .button:before,
-.pagination .archive .button:after {
+#main-header .icon-older:after {
+	top: 8px;
+	left: 8px;
+	border-width: 8px 0 8px 16px;
+	border-color: transparent transparent transparent #888;
+}
+
+/* Archive */
+.icon-archive:before,
+.icon-archive:after {
 	content: "";
 	position: absolute;
 	top: 11px;
@@ -263,9 +229,73 @@
 	border-width: 4px 0;
 }
 
-.pagination .archive .button:after {
+.icon-archive:after {
 	top: 27px;
 }
+
+#main-header .icon-archive:before,
+#main-header .icon-archive:after {
+	border-color: #888;
+	width: 18px;
+	left: 7px;
+	border-width: 3px 0;
+	height: 2px;
+	top: 7px;
+}
+
+#main-header .icon-archive:after {
+	top: 17px;
+}
+
+
+/*------------
+	Pagination
+--------------*/
+
+section .pagination {
+	margin: 0;
+	padding: 0 120px 20px;
+}
+
+section .pagination ul {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto 60px;
+	text-align: center;
+	padding: 0;
+}
+
+section .pagination li {
+	position: absolute;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+section .pagination li .button {
+	display: block;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+section .pagination .newer {
+	left: -60px;
+}
+
+section .pagination .older {
+	left: 60px;
+}
+
+section .pagination .archive {
+	left: 0;
+}
+
 
 /*-------------
 	Error Pages
@@ -295,4 +325,27 @@
 
 #error-404:hover header:before {
 	color: #fff;
+}
+
+
+/*-----------------
+	IE Notification
+-------------------*/
+.ie-notification {
+	position: absolute;
+	top: 20px;
+	left: 122px;
+	width: auto;
+	margin-right: 20px;
+	padding: 4px 10px;
+	background-color: #da4b3d;
+	margin-bottom: 0;
+	color: #fff;
+	border-bottom: 1px solid #c62a28;
+	z-index: 20;
+}
+
+.ie-notification a {
+	color: #fff;
+	text-decoration: underline;
 }
