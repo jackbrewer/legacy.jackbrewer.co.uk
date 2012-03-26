@@ -15,9 +15,10 @@
 		Enjoy!
 		Jack.
 
-		 -->
-
+		-->
+		{% if page.section == 'home' %}
 		<title>Jack Brewer - Perfect pixels and awesome code</title>
+		{% elsif page.title %}<title>{{ page.title }} / Jack Brewer</title>{% endif %}
 
 		<meta charset="utf-8" />
 		<meta name="description" content="Jack Brewer - Perfect pixels and awesome code" />
