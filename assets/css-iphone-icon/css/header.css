@@ -13,11 +13,11 @@
 	    -ms-transition: background-position .6s cubic-bezier(.41,.26,.48,1.14);
 	     -o-transition: background-position .6s cubic-bezier(.41,.26,.48,1.14);
 	        transition: background-position .6s cubic-bezier(.41,.26,.48,1.14);
-	-webkit-box-shadow: 0px -20px 100px 50px rgba(0,0,0,.8) inset;
+/*	-webkit-box-shadow: 0px -20px 100px 50px rgba(0,0,0,.8) inset;
 	   -moz-box-shadow: 0px -20px 100px 50px rgba(0,0,0,.8) inset;
 	    -ms-box-shadow: 0px -20px 100px 50px rgba(0,0,0,.8) inset;
 	     -o-box-shadow: 0px -20px 100px 50px rgba(0,0,0,.8) inset;
-	        box-shadow: 0px -20px 100px 50px rgba(0,0,0,.8) inset;
+	        box-shadow: 0px -20px 100px 50px rgba(0,0,0,.8) inset;*/
 }
 #css-iphone-icon:hover header {
 	background-position: -60% 40%, 50% 40%, 0% 50%;
@@ -26,10 +26,10 @@
 /* Landscape iPhone and smaller */
 @media only screen and (max-width: 480px) {
 	#css-iphone-icon header {
-		-webkit-box-shadow: 0px -20px 50px 50px rgba(0,0,0,.8) inset;
+/*		-webkit-box-shadow: 0px -20px 50px 50px rgba(0,0,0,.8) inset;
 		   -moz-box-shadow: 0px -20px 50px 50px rgba(0,0,0,.8) inset;
 		    -ms-box-shadow: 0px -20px 50px 50px rgba(0,0,0,.8) inset;
 		     -o-box-shadow: 0px -20px 50px 50px rgba(0,0,0,.8) inset;
-		        box-shadow: 0px -20px 50px 50px rgba(0,0,0,.8) inset;
+		        box-shadow: 0px -20px 50px 50px rgba(0,0,0,.8) inset;*/
 	}
 }
