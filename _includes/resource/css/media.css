@@ -80,11 +80,11 @@
 	}
 
 	#main-header nav {
-		float: left;
+		float: right;
 		position: static;
 		display: block;
 		margin-top: 0;
-		margin-left: 2px;
+		margin-right: 8px;
 	}
 
 	.float-left,
@@ -103,6 +103,7 @@
 	article header h1 {
 		font-size: 1.875em;
 		margin-top: 170px;
+		border-left: 0;
 	}
 
 	article header h1:before,
