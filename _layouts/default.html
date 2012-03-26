@@ -53,8 +53,10 @@
 		<!-- Google Fonts API -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
-	</head>
-	<body class="home">
+	</head>{% if page.section %}
+	<body class={{ page.section }}>{% else%}
+	<body>{% endif %}
+
 		<div id="container">
 
 			<!-- Header -->
