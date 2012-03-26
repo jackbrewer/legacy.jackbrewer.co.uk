@@ -85,21 +85,24 @@
 
 		</div>
 
-		<!-- Scripts -->
+		<!-- jQuery via CDN - local fallback -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>if (typeof jQuery === 'undefined') { document.write('<script src="/resource/js/jquery-1.7.1.js" />'); }</script>
+
+		<!-- General Scripts -->
 		<script src="/resource/js/google-code-prettify/prettify.js"></script>
 		<script src="/resource/js/google-code-prettify/lang-css.js"></script>
+		<script>
+			(function(){
+				prettyPrint();
+			})();
+		</script>
 		{% if page.section == 'home' and paginator.page == 1 %}<script src="/resource/js/header.js"></script>{% endif %}
 		{% if paginator.posts %}{% for post in paginator.posts %}{% if post.scripts %}
 		<!-- Post Specific Script -->{% for script in post.scripts %}
 		<script src="/assets{{post.url}}js/{{script}}"></script>{% endfor %}{% endif %}{% endfor %}{% elsif page.url %}
 		<!-- Page Specific Script -->{% if page.scripts %}{% for script in page.scripts %}
 		<script src="/assets{{page.url}}js/{{script}}"></script>{% endfor %}{% endif %}{% endif %}
-		<script>
-			(function(){
-				prettyPrint();
-			})();
-		</script>
 		<!-- Google Analytics -->
 		<script>
 			var _gaq = _gaq || [];
