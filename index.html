@@ -19,30 +19,9 @@ section: home
 					</div><!-- .post-content -->
 				</article>
 				{% endfor %}
+
 				<nav class="pagination">
-					<ul>
-						<li class="newer">
-						{% if paginator.previous_page == 1 %}
-							{% if paginator.previous_page %}
-								<a class="button" href="/" title="Newer Posts">Newer Posts</a>
-							{% else %}
-								<a class="button" href="/page{{ paginator.previous_page }}/" title="Previous Page">Newer</a>
-							{% endif %}
-						{% else %}
-							<span class="button disabled">No Newer Posts</span>
-						{% endif %}
-						</li>
-						<li class="archive">
-							<a class="button" href="/archive/">Archive</a>
-						</li>
-						<li class="older">
-						{% if paginator.next_page %}
-							<a class="button" href="/page{{ paginator.next_page }}/" title="Next Page">Older</a>
-						{% else %}
-							<span class="button disabled">No Older Posts</span>
-						{% endif %}
-						</li>
-					</ul>
+{% include content/pagination.html %}
 				</nav>
 
 			</section>
