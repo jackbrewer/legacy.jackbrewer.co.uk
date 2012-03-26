@@ -1,16 +1,17 @@
 #disabling-caps-lock-on-osx header {
-	background-image: url('../images/window-1.png'), url('../../generic/images/bg-osx.jpg');
+	background-image: url('../images/window-1.png'), url('../../generic/images/bg-osx.jpg'), url('../images/window-2.png');
 	background-size: 766px auto, 1000px auto;
 	background-position: 50% 60px, 50% 100%;
 	-webkit-transition: background-position .5s ease;
 	   -moz-transition: background-position .5s ease;
 	     -o-transition: background-position .5s ease;
 	        transition: background-position .5s ease;
-	background-repeat: no-repeat, no-repeat;
-	box-shadow: 0 -25px 50px rgba(0, 0, 0, .2) inset;
+	background-repeat: no-repeat;
 }
+
 #disabling-caps-lock-on-osx:hover header {
 	background-position: 50% 10px, 50% 50%;
+	background-image: url('../images/window-2.png'), url('../../generic/images/bg-osx.jpg');
 }
 
 /* Landscape iPhone and smaller */
