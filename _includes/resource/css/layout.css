@@ -56,6 +56,7 @@
 	margin-bottom: 0;
 	font-size: 20px;
 	line-height: 22px;
+	background-color: #4992ad;
 	background-image: url("../images/jb-logo.png");
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
@@ -202,6 +203,5 @@
 }
 
 #main-footer p {
-	margin: 0 0;
-	padding: 0 120px;
+	margin-bottom: 0;
 }
