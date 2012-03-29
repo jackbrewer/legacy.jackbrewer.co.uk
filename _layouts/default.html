@@ -21,8 +21,8 @@
 		{% elsif page.title %}<title>{{ page.title }} / Jack Brewer</title>{% endif %}
 
 		<meta charset="utf-8" />
-		<meta name="description" content="Jack Brewer - Perfect pixels and awesome code" />
-		<meta name="keywords"    content="" />
+		<meta name="description" content="Jack Brewer - Web developer and designer, CSS experimenter." />
+		<meta name="keywords"    content="Jack Brewer, web development, web design, CSS3, HTML5" />
 		<meta name="author"      content="Jack Brewer - http://jackbrewer.co.uk">
 		<meta name="viewport"    content="width=device-width, initial-scale=1.0">
 		<meta name="apple-mobile-web-app-capable"          content="yes">
@@ -46,14 +46,17 @@
 		<link rel="apple-touch-startup-image" href="/resource/images/apple-startup-640x920.png" sizes="640x920" />
 
 		<!-- CSS -->
-		<link rel="stylesheet" href="/resource/css/style.css" />{% if paginator.posts %}
-		<!-- Post Specific Style -->{% for post in paginator.posts %}
+		<link rel="stylesheet" href="/resource/css/style.css" />
+		<link rel="stylesheet" href="/resource/js/google-code-prettify/prettify.css" />
+		{% if paginator.posts %}{% for post in paginator.posts %}<!-- Post Specific Style -->
 		<link rel="stylesheet" href="/assets{{post.url}}css/header.css" />{% if post.stylesheets %}{% for stylesheet in post.stylesheets %}
-		<link rel="stylesheet" href="/assets{{post.url}}css/{{stylesheet}}" />{% endfor %}{% endif %}{% endfor %}{% elsif page.url %}
+		<link rel="stylesheet" href="/assets{{post.url}}css/{{stylesheet}}" />{% endfor %}{% endif %}
+		{% if post.extStylesheets %}{% for extStylesheet in post.extStylesheets %}<!-- External Post Specific Style -->
+		<link rel="stylesheet" href="{{ extStylesheet }}" />{% endfor %}{% endif %}{% endfor %}{% elsif page.url %}
 		<!-- Page Specific Style -->
 		<link rel="stylesheet" href="/assets{{page.url}}css/header.css" />{% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
-		<link rel="stylesheet" href="/assets{{page.url}}css/{{stylesheet}}" />{% endfor %}{% endif %}{% endif %}
-		<link rel="stylesheet" href="/resource/js/google-code-prettify/prettify.css" />
+		<link rel="stylesheet" href="/assets{{page.url}}css/{{stylesheet}}" />{% endfor %}{% endif %}{% endif %}{% if page.extStylesheets %}{% for extStylesheet in page.extStylesheets %}
+		<link rel="stylesheet" href="{{ extStylesheet }}" />{% endfor %}{% endif %}
 		<!-- Google Fonts API -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
@@ -102,11 +105,14 @@
 			})();
 		</script>
 		{% if page.section == 'home' and paginator.page == 1 %}<script src="/resource/js/header.js"></script>{% endif %}
-		{% if paginator.posts %}{% for post in paginator.posts %}{% if post.scripts %}
-		<!-- Post Specific Script -->{% for script in post.scripts %}
-		<script src="/assets{{post.url}}js/{{script}}"></script>{% endfor %}{% endif %}{% endfor %}{% elsif page.url %}
-		<!-- Page Specific Script -->{% if page.scripts %}{% for script in page.scripts %}
-		<script src="/assets{{page.url}}js/{{script}}"></script>{% endfor %}{% endif %}{% endif %}
+		{% if paginator.posts %}{% for post in paginator.posts %}
+		{% if post.scripts %}{% for script in post.scripts %}<!-- Post Specific Scripts -->
+		<script src="/assets{{post.url}}js/{{script}}"></script>{% endfor %}{% endif %}
+		{% if post.extScripts %}{% for extScript in post.extScripts %}<!-- External Post Specific Scripts -->
+		<script src="{{extScript}}"></script>{% endfor %}{% endif %}{% endfor %}
+		{% elsif page.url %}<!-- Page Specific Script -->{% if page.scripts %}{% for script in page.scripts %}
+		<script src="/assets{{page.url}}js/{{script}}"></script>{% endfor %}{% endif %}{% if page.extScripts %}{% for extSript in page.extScripts %}
+		<script src="{{extSript}}"></script>{% endfor %}{% endif %}{% endif %}
 		<!-- Google Analytics -->
 		<script>
 			var _gaq = _gaq || [];
