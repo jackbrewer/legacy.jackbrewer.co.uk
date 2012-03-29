@@ -21,5 +21,9 @@ demo: true
 <p>Switching the <code>&lt;div role="progressbar"&gt;</code> for a <code>&lt;progress value="85%" max="100%"&gt;</code> would make this semantically better but browser support for styling progress elements is extremely poor at the moment.</p>
 <p>An actual implementation of this would also need some method of updating the value(s) within the markup.</p>
 <h2>Cons</h2>
-<p>This is a prototype that is not yet ready to be unleashed on the world. I have set up this demo to animate using CSS transitions whereas a real implementation would probably need some JavaScript interaction to dynamically calculate the user's actual progress. Using JS to handle the animation would also negate some of the browser compatibility issues which the :after pseudo element causes.</p>
+<p>This is a prototype that is not yet ready to be unleashed on the world. I have set up this demo to animate using CSS transitions whereas a real implementation would probably need some JavaScript interaction to dynamically calculate the user's actual progress. Using JS to handle the animation would also negate some of the browser compatibility issues which the <code>:after</code> pseudo element causes.</p>
 <p>I could also have increased browser support for this demo by using extra markup instead of pseudo elements but this goes against what I was trying to achieve.</p>
+<p class="actions">
+	<a href="http://demos.jackbrewer.co.uk/animated-css-progress-bar" class="button icon-demo">Demo</a>
+	<a href="https://github.com/jackbrewer/demos/tree/gh-pages/animated-css-progress-bar" class="button icon-source">Source</a>
+</p>
