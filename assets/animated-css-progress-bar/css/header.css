@@ -1,4 +1,4 @@
-#css-progress-bar header {
+#animated-css-progress-bar header {
 	background-image:
 	  -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 40%, rgba(255,255,255,0) 45%),
 	  -webkit-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
@@ -28,13 +28,13 @@
 	     -o-transition: background-position 2s ease;
 	        transition: background-position 2s ease;
 }
-#css-progress-bar:hover header {
+#animated-css-progress-bar:hover header {
 	background-position: 0 0, 100% 0 ,100% 0;
 }
 
 /* Landscape iPhone and smaller */
 @media only screen and (max-width: 480px) {
-	#css-progress-bar header {
+	#animated-css-progress-bar header {
 		background-size: 100% 100%, 50px 100%, 4400px 210px;
 	}
 }
