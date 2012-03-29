@@ -71,6 +71,7 @@
 		font-size: 12px;
 		line-height: 14px;
 		background-size: 66px auto;
+		background-image: url("../images/jb-logo-x2.png");
 	}
 
 	#main-header h1 a {
@@ -126,6 +127,9 @@
 	article .post-content {
 		margin-left: 10px;
 		margin-right: 10px;
+	}
+
+	article .post-content .actions {
 		text-align: center;
 	}
 
