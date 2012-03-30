@@ -9,7 +9,7 @@
 	        transition: background-position .6s ease;
 }
 
-#why-impratical-css-experiments-are-useful:hover header {
+#why-impratical-css-experiments-are-useful header:hover {
 	background-position: 50% 100%;
 }
 

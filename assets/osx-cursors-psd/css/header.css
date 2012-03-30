@@ -10,7 +10,7 @@
 	     -o-transition: background-position 0.3s ease;
 	        transition: background-position 0.3s ease;
 }
-#osx-cursors-psd:hover header {
+#osx-cursors-psd header:hover {
 	background-position: -260% 70%;
 }
 
@@ -28,7 +28,7 @@
 	background-repeat: no-repeat;
 }
 
-#osx-cursors-psd:hover header:after {
+#osx-cursors-psd header:hover:after {
 	background-position: 0px 0px;
 }
 

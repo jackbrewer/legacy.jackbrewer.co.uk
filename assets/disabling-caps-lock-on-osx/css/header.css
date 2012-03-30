@@ -9,7 +9,7 @@
 	background-repeat: no-repeat;
 }
 
-#disabling-caps-lock-on-osx:hover header {
+#disabling-caps-lock-on-osx header:hover {
 	background-position: 50% 10px, 50% 50%;
 	background-image: url('../images/window-2.png'), url('../../generic/images/bg-osx.jpg');
 }

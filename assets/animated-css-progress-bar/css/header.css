@@ -28,7 +28,7 @@
 	     -o-transition: background-position 2s ease;
 	        transition: background-position 2s ease;
 }
-#animated-css-progress-bar:hover header {
+#animated-css-progress-bar header:hover {
 	background-position: 0 0, 100% 0 ,100% 0;
 }
 
