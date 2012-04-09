@@ -19,7 +19,6 @@
 		{% if page.section == 'home' %}
 		<title>Jack Brewer - Perfect pixels and awesome code</title>
 		{% elsif page.title %}<title>{{ page.title }} / Jack Brewer</title>{% endif %}
-
 		<meta charset="utf-8" />
 		<meta name="description" content="Jack Brewer - Web developer and designer, CSS experimenter." />
 		<meta name="keywords"    content="Jack Brewer, web development, web design, CSS3, HTML5" />
@@ -28,7 +27,6 @@
 		<meta name="apple-mobile-web-app-capable"          content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="google-site-verification"              content="XWQ7RJmaCzLVmWrBelBdp7M2YRD68DTeSU-tkoPA3Z0" />
-
 
 		<!-- Quick fix so IE can join the HTML5 party -->
 		<script>
@@ -49,10 +47,9 @@
 		<!-- CSS -->
 		<link rel="stylesheet" href="/resource/css/style.css" />
 		<link rel="stylesheet" href="/resource/js/google-code-prettify/prettify.css" />
-		{% if paginator.posts %}{% for post in paginator.posts %}<!-- Post Specific Style -->
+		{% if paginator.posts %}<!-- Post Specific Styles -->{% for post in paginator.posts %}
 		<link rel="stylesheet" href="/assets{{post.url}}css/header.css" />{% if post.stylesheets %}{% for stylesheet in post.stylesheets %}
-		<link rel="stylesheet" href="/assets{{post.url}}css/{{stylesheet}}" />{% endfor %}{% endif %}
-		{% if post.extStylesheets %}{% for extStylesheet in post.extStylesheets %}<!-- External Post Specific Style -->
+		<link rel="stylesheet" href="/assets{{post.url}}css/{{stylesheet}}" />{% endfor %}{% endif %}{% if post.extStylesheets %}{% for extStylesheet in post.extStylesheets %}
 		<link rel="stylesheet" href="{{ extStylesheet }}" />{% endfor %}{% endif %}{% endfor %}{% elsif page.url %}
 		<!-- Page Specific Style -->
 		<link rel="stylesheet" href="/assets{{page.url}}css/header.css" />{% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
