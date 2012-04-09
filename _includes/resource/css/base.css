@@ -5,52 +5,52 @@
  */
 
 /*--------------------
-  Typographic Styles
+	Typographic Styles
 ----------------------*/
 
 ::-moz-selection {
-  color: #fff;
-  background: #4992ad;
+	color: #fff;
+	background: #4992ad;
 }
 ::selection {
-  color: #fff;
-  background: #4992ad;
+	color: #fff;
+	background: #4992ad;
 }
 
 body {
-  font-family: "Lato", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #222;
+	font-family: "Lato", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+	font-weight: 300;
+	color: #222;
 }
 
 a {
-  color: #4992ad;
-  text-decoration: none;
-  -webkit-transition: color 0.4s ease;
-     -moz-transition: color 0.4s ease;
-      -ms-transition: color 0.4s ease;
-       -o-transition: color 0.4s ease;
-          transition: color 0.4s ease;
+	color: #4992ad;
+	text-decoration: none;
+	-webkit-transition: color 0.4s ease;
+	   -moz-transition: color 0.4s ease;
+	    -ms-transition: color 0.4s ease;
+	     -o-transition: color 0.4s ease;
+	        transition: color 0.4s ease;
 }
 a:hover {
-  color: #333;
-  text-decoration: none;
-  -webkit-transition: color 0.2s ease;
-     -moz-transition: color 0.2s ease;
-      -ms-transition: color 0.2s ease;
-       -o-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+	color: #333;
+	text-decoration: none;
+	-webkit-transition: color 0.2s ease;
+	   -moz-transition: color 0.2s ease;
+	    -ms-transition: color 0.2s ease;
+	     -o-transition: color 0.2s ease;
+	        transition: color 0.2s ease;
 }
 a:focus,
 a:active {
-  color: #333;
-  outline: none;
+	color: #333;
+	outline: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+	font-weight: 300;
 }
 
 h1 {font-size: 2.375em;}
@@ -61,149 +61,149 @@ h5 {font-size: 1.1em;}
 h6 {font-size: 1em;}
 
 pre, code, kbd, style {
-  font-family: Monaco, "Courier New", Courier, monospace;
-  font-size: .875em;
+	font-family: Monaco, "Courier New", Courier, monospace;
+	font-size: .875em;
 }
 pre code {
-  font-size: 1em;
+	font-size: 1em;
 }
 
 blockquote {
-  font-size: 1.125em;
+	font-size: 1.125em;
 }
 
 
 /*---------------
-  Layout Styles
+	Layout Styles
 -----------------*/
 
 body {
-  background-color: #FFF;
+	background-color: #FFF;
 }
 
 /* Display in IE */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
-  display: block;
+	display: block;
 }
 
 html, body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 p, pre, dt, ul, ol, hr, legend, input, button, textarea, select, address, table, blockquote {
-  margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 fieldset, img {
-  border: 0;
+	border: 0;
 }
 
 img, object {
-  vertical-align: bottom;
+	vertical-align: bottom;
 }
 
 ul li {
-  list-style-type: disc;
-  list-style-position: inside;
+	list-style-type: disc;
+	list-style-position: inside;
 }
 ol li {
-  list-style-type: decimal;
-  list-style-position: inside;
+	list-style-type: decimal;
+	list-style-position: inside;
 }
 
 nav ul li {
-  list-style: none;
+	list-style: none;
 }
 
 sub,
 sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline;
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
 }
 sup {
-  top: -0.5em;
+	top: -0.5em;
 }
 
 sub {
-  bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 legend {
-  color: #000;
-  padding-bottom: .5em;
+	color: #000;
+	padding-bottom: .5em;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 th {
-  text-align: center;
+	text-align: center;
 }
 tbody th {
-  text-align: left;
+	text-align: left;
 }
 
 blockquote, q, em, cite, dfn, i, cite, var, address {
-  font-style: italic;
+	font-style: italic;
 }
 
 blockquote p:before, blockquote p:after, q:before, q:after {content: '';}
 
 th, strong, dt, b {
-  font-weight: 400;
+	font-weight: 400;
 }
 
 ins {
-  text-decoration: none;
-  border-bottom: 3px double #333;
+	text-decoration: none;
+	border-bottom: 3px double #333;
 }
 
 del {
-  text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 mark {
-  background-color: #FF9;
-  color: #000000;
-  font-style: italic;
-  font-weight: bold;
+	background-color: #FF9;
+	color: #000000;
+	font-style: italic;
+	font-weight: bold;
 }
 
 abbr,
 acronym {
-  border-bottom: 1px dotted #333;
-  font-variant: normal;
+	border-bottom: 1px dotted #333;
+	font-variant: normal;
 }
 
 dd {
-  padding-left: 20px;
-  margin-top: .5em;
+	padding-left: 20px;
+	margin-top: .5em;
 }
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin-right: 30px;
-  margin-left: 30px;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #cccccc;
+	margin-right: 30px;
+	margin-left: 30px;
 }
 
 blockquote {
-  border-left: 1px solid #ccc;
-  padding: 10px 20px 10px 39px;
-  background-color: #fafafa;
+	border-left: 1px solid #ccc;
+	padding: 10px 20px 10px 39px;
+	background-color: #fafafa;
 }
 
 blockquote p {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
