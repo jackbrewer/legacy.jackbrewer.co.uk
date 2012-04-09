@@ -1,0 +1,89 @@
+#css-plus-bundle header {
+	background-image: url('../images/sublime.png'), url('../images/margin-sprite.png'), url('../../generic/images/bg-osx.jpg');
+	background-size: 810px 420px, 160px 320px, 1000px auto;
+	background-position: 150px 0, 271px 167px, 30% 100%;
+	background-repeat: no-repeat, no-repeat, repeat;
+
+	-webkit-animation-name: idle;
+	   -moz-animation-name: idle;
+	    -ms-animation-name: idle;
+	     -o-animation-name: idle;
+	        animation-name: idle;
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	    -ms-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-timing-function: steps(2);
+	   -moz-animation-timing-function: steps(2);
+	    -ms-animation-timing-function: steps(2);
+	     -o-animation-timing-function: steps(2);
+	        animation-timing-function: steps(2);
+	-webkit-animation-iteration-count: infinite;
+	   -moz-animation-iteration-count: infinite;
+	    -ms-animation-iteration-count: infinite;
+	     -o-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+}
+
+#css-plus-bundle header:hover {
+	-webkit-animation-name: margin-tabs;
+	   -moz-animation-name: margin-tabs;
+	    -ms-animation-name: margin-tabs;
+	     -o-animation-name: margin-tabs;
+	        animation-name: margin-tabs;
+	-webkit-animation-iteration-count: 1;
+	   -moz-animation-iteration-count: 1;
+	    -ms-animation-iteration-count: 1;
+	     -o-animation-iteration-count: 1;
+	        animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	   -moz-animation-fill-mode: forwards;
+	    -ms-animation-fill-mode: forwards;
+	     -o-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-timing-function: steps(15);
+	   -moz-animation-timing-function: steps(15);
+	    -ms-animation-timing-function: steps(15);
+	     -o-animation-timing-function: steps(15);
+	        animation-timing-function: steps(15);
+	-webkit-animation-duration: 4s;
+	   -moz-animation-duration: 4s;
+	    -ms-animation-duration: 4s;
+	     -o-animation-duration: 4s;
+	        animation-duration: 4s;
+}
+
+/* Landscape iPhone and smaller */
+@media only screen and (max-width: 480px) {
+	#css-plus-bundle header,
+	#css-plus-bundle header:hover {
+		background-position: 50px 0, 110px 44px, 30% 100%;
+		background-size: 405px auto, 81px auto, 500px auto;
+		-webkit-animation-name: none;
+		   -moz-animation-name: none;
+		    -ms-animation-name: none;
+		     -o-animation-name: none;
+		        animation-name: none;
+	}
+}
+
+@-webkit-keyframes idle {
+	0% { background-position: 150px 0, 271px 167px, 30% 100%; }
+	100% { background-position: 150px 0, 271px 127px, 30% 100%; }
+}
+
+@-moz-keyframes idle {
+	0% { background-position: 150px 0, 271px 167px, 30% 100%; }
+	100% { background-position: 150px 0, 271px 127px, 30% 100%; }
+}
+
+@-webkit-keyframes margin-tabs {
+	0% { background-position: 150px 0, 271px 167px, 30% 100%; }
+	100% { background-position: 150px 0, 271px -133px, 30% 100%; }
+}
+
+@-moz-keyframes margin-tabs {
+	0% { background-position: 150px 0, 271px 167px, 30% 100%; }
+	100% { background-position: 150px 0, 271px -133px, 30% 100%; }
+}
