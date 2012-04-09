@@ -38,3 +38,24 @@
 		background-size: 100% 100%, 50px 100%, 4400px 210px;
 	}
 }
+
+/* Hard coded widths for additional example progress bars */
+
+[role="progressbar"][data-value] {
+	margin-bottom: 20px;
+}
+[role="progressbar"][data-value="0"]:after {
+	width: 0%;
+}
+[role="progressbar"][data-value="25"]:after {
+	width: 25%;
+}
+[role="progressbar"][data-value="50"]:after {
+	width: 50%;
+}
+[role="progressbar"][data-value="75"]:after {
+	width: 75%;
+}
+[role="progressbar"][data-value="100"]:after {
+	width: 100%;
+}

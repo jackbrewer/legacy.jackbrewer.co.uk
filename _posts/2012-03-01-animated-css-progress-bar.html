@@ -15,6 +15,15 @@ demo: true
 </div>
 <p class="note">The CSS above is interactive &mdash; change the width value in Firefox to see the animation in action.</p>
 <p>This is the only example I have seen so far that makes use of a negative background-position to animate the colour of the bar from red, through orange and yellow, to green &mdash; depending on the amount of progress made.</p>
+<p>For those of you who don't want to wake the slumbering beast that is Firefox, here are a few more examples of the colour changing goodness that you are missing.</p>
+<div class="example">
+	<div role="progressbar" data-value="0" >0% Complete</div>
+	<div role="progressbar" data-value="25">25% Complete</div>
+	<div role="progressbar" data-value="50">50% Complete</div>
+	<div role="progressbar" data-value="75">75% Complete</div>
+	<div role="progressbar" data-value="100">100% Complete</div>
+</div>
+<p>I've hard-coded <em>non-animated</em> widths on these to illustrate how the progress bar looks at vartious stages of its transition, at 0%, 25%, 50%, 75% and 100% progress.</p>
 <h2>Pros</h2>
 <p>The markup is beautiful! No wrapping or empty elements.</p>
 <pre class="prettyprint"><code class="html">&lt;div role="progressbar"&gt;85% Complete&lt;/div&gt;</code></pre>
