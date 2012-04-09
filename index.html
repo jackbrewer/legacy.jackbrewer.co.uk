@@ -13,11 +13,11 @@ section: home
 						<time datetime="{{ post.date | date: "%d-%m-%Y" }}">{{ post.date | date: "%A %d %B %Y" }}</time>
 					</header>
 					<div class="post-content">
-{% if post.postSummary %}
-	{% include content/excerpt.html %}
-{% else %}
-	{{ post.content }}
-{% endif %}
+{% if post.postSummary %}{{ post.postSummary }}
+<p class="actions">
+	<a href="{{ post.url }}#more" class="button">Read More</a>
+</p>
+{% else %}{{ post.content }}{% endif %}
 					</div><!-- .post-content -->
 				</article>
 				{% endfor %}
