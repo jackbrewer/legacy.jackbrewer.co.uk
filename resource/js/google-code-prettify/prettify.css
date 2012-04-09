@@ -66,6 +66,29 @@ pre code {
 	display: block;
 }
 
+code .code-highlight {
+	background-color: #3c3f43;
+	margin: 1px -1px;
+	padding: 1px 1px;
+	border-radius: 2px;
+	z-index:0;
+}
+
+code .caret {
+	position: relative;
+}
+
+code .caret:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 1px;
+	width: 1px;
+	height: 100%;
+	background-color: #9a9b9b;
+	display: block;
+}
+
 /* Defaults */
 .prettyprint .str {color:#8f9d6a;} /* Any CSS in quotes */
 .prettyprint .atv {color:#8f9d6a;} /* Any HTML in quotes */
@@ -85,3 +108,41 @@ pre code {
 
 .prettyprint .plain span {color: #f8f8f8;}
 .prettyprint .plain span.com {color: #5f5a60;}
+
+/* Hacky hex colour highlighting */
+.prettyprint .hex .com {
+	color: #c87641;
+	font-style: normal;
+}
+
+
+/* Simulated Dropdowns */
+code span.dropdown {
+	background-color: #eee;
+	margin: 0 0 0 -4px;
+	padding-left: 10px;
+	padding-right: 20px;
+	display: inline-block;
+	border-top: 1px solid #ddd;
+}
+
+.prettyprint .dropdown span[class] {
+	color: #222;
+}
+
+code .dropdown.first {
+	border-radius: 4px 4px 0 0;
+	border-top: 0;
+}
+
+code .dropdown.last {
+	border-radius: 0 0 4px 4px;
+}
+
+code .dropdown.selected {
+	background: #3b70d7;
+}
+
+code .dropdown.selected span[class] {
+	color: #fff;
+}
