@@ -1,0 +1,5 @@
+{{ post.content | split:'<!-- excerpt end -->' | first | split:'<!-- excerpt start -->' | last }}
+
+<p class="actions">
+	<a href="{{ post.url }}" class="button">Read More</a>
+</p>

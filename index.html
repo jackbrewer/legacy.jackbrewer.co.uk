@@ -13,9 +13,11 @@ section: home
 						<time datetime="{{ post.date | date: "%d-%m-%Y" }}">{{ post.date | date: "%A %d %B %Y" }}</time>
 					</header>
 					<div class="post-content">
-
-{{ post.content }}
-
+{% if post.postSummary %}
+	{% include content/excerpt.html %}
+{% else %}
+	{{ post.content }}
+{% endif %}
 					</div><!-- .post-content -->
 				</article>
 				{% endfor %}
