@@ -23,6 +23,7 @@ body {
 	line-height: 1.5;
 	font-weight: 300;
 	color: #222;
+	-webkit-font-smoothing: antialiased;
 }
 
 a {
