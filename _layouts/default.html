@@ -31,14 +31,11 @@
 
 		<!-- Quick fix so IE can join the HTML5 party -->
 		<script>
-			document.createElement('article');
-			document.createElement('aside');
-			document.createElement('footer');
-			document.createElement('header');
-			document.createElement('hgroup');
-			document.createElement('nav');
 			document.createElement('section');
-			document.createElement('time');
+			var html5Elements = ['article' 'aside', 'footer', 'header', 'hgroup', 'nav', 'section', 'time'];
+			for (var i = 0; i < html5Elements.length; i++) {
+				document.createElement(html5Elements[i]);
+			}
 		</script>
 
 		<link rel="shortcut icon" href="/resource/images/favicon.ico" />
