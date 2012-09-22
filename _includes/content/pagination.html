@@ -1,27 +1,27 @@
 					{% if paginator.posts and page.section != 'archive' %}<ul>
 						<li class="newer">{% if paginator.previous_page == 1 %}{% if paginator.previous_page %}
 							<a class="button icon-newer" href="/" title="Newer Posts">Newer Posts</a>{% else %}
-							<a class="button icon-newer" href="/page{{ paginator.previous_page }}/" title="Previous Page">Newer</a>{% endif %}{% else %}
+							<a class="button icon-newer" href="/page{{ paginator.previous_page }}/" title="Previous Page">Newer Posts</a>{% endif %}{% else %}
 							<span class="button icon-newer disabled">No Newer Posts</span>{% endif %}
 						</li>
 						<li class="archive">
 							<a class="button icon-archive" href="/archive/">Archive</a>
 						</li>
 						<li class="older">{% if paginator.next_page %}
-							<a class="button icon-older" href="/page{{ paginator.next_page }}/" title="Next Page">Older</a>{% else %}
+							<a class="button icon-older" href="/page{{ paginator.next_page }}/" title="Next Page">Older Posts</a>{% else %}
 							<span class="button icon-older disabled">No Older Posts</span>{% endif %}
 						</li>
 					</ul>{% elsif page %}
 					<ul>
 						<li class="newer">{% if page.next.url %}
-							<a class="button icon-newer" href="{{page.next.url}}" title="Newer Post: {{page.next.title}}">{{page.next.title}}</a>{% else %}
+							<a class="button icon-newer" href="{{page.next.url}}" title="Newer Post: {{page.next.title}}">Newer Post: {{page.next.title}}</a>{% else %}
 							<span class="button icon-newer disabled">No Newer Posts</span>{% endif %}
 						</li>
 						<li class="archive">
 							<a class="button icon-archive" href="/archive/">Archive</a>
 						</li>
 						<li class="older">{% if page.previous.url %}
-							<a class="button icon-older" href="{{page.previous.url}}" title="Older Post: {{page.previous.title}}">{{page.previous.title}}</a>{% else %}
+							<a class="button icon-older" href="{{page.previous.url}}" title="Older Post: {{page.previous.title}}">Older Post: {{page.previous.title}}</a>{% else %}
 							<span class="button icon-older disabled">No Older Posts</span>{% endif %}
 						</li>
 					</ul>{% endif %}
