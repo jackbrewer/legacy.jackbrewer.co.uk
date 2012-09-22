@@ -326,26 +326,3 @@ section .pagination .archive {
 #error-404:hover header:before {
 	color: #fff;
 }
-
-
-/*-----------------
-	IE Notification
--------------------*/
-.ie-notification {
-	position: absolute;
-	top: 20px;
-	left: 122px;
-	width: auto;
-	margin-right: 20px;
-	padding: 4px 10px;
-	background-color: #da4b3d;
-	margin-bottom: 0;
-	color: #fff;
-	border-bottom: 1px solid #c62a28;
-	z-index: 20;
-}
-
-.ie-notification a {
-	color: #fff;
-	text-decoration: underline;
-}

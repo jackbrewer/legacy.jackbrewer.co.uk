@@ -1,0 +1,57 @@
+---
+layout: nil
+---
+
+/*
+ A minimal stylesheet for IE8 and earlier
+
+ This file contains multiple aggregated files
+ Individual files can be found in the _includes folder on GitHub
+ */
+
+{% include resource/css/base.css %}
+
+#container {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	padding: 100px 20px 60px;
+}
+
+#main-header li,
+.pagination li {
+	margin: 0;
+	padding: 0;
+	list-style: circle;
+}
+
+.post-content {
+	margin-bottom: 80px;
+	padding-bottom: 50px;
+	border-bottom: 1px dotted #bbb;
+}
+
+article header {
+	background: none !important;
+}
+
+/*-----------------
+	IE Notification
+-------------------*/
+.ie-notification {
+	position: absolute;
+	top: 20px;
+	left: auto;
+	width: auto;
+	margin-right: 20px;
+	padding: 4px 10px;
+	background-color: #222;
+	margin-bottom: 0;
+	color: #fff;
+	z-index: 20;
+}
+
+.ie-notification a {
+	color: #fff;
+	text-decoration: underline;
+}

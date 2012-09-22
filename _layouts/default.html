@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+	<!--[if lt IE 8]><html class="old-ie" lang="en"><![endif]-->
+	<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
 	<head>
 
 		<!--
@@ -45,7 +46,12 @@
 		<link rel="apple-touch-startup-image" href="/resource/images/apple-startup-640x920.png" sizes="640x920" />
 
 		<!-- CSS -->
+		<!--[if gt IE 8]><!-->
 		<link rel="stylesheet" href="/resource/css/style.css" />
+		<!--<![endif]-->
+		<!--[if lt IE 8]>
+		<link rel="stylesheet" href="/resource/css/minimal.css" />
+		<![endif]-->
 		<link rel="stylesheet" href="/resource/js/google-code-prettify/prettify.css" />
 		{% if paginator.posts %}<!-- Post Specific Styles -->{% for post in paginator.posts %}
 		<link rel="stylesheet" href="/assets{{post.url}}css/header.css" />{% if post.stylesheets %}{% for stylesheet in post.stylesheets %}
@@ -85,7 +91,7 @@
 
 			<!-- A TEMPORARY Internet Explorer notice -->
 			<!--[if lt IE 9]>
-				<p class="ie-notification">Hi Internet Explorer user. I haven't completely forgotten about you but until I get time to hack my lovely site for your awful browser, things will look a bit strange. If you want to try a better browser, there are <a href="http://browsehappy.com/">lots to choose from</a>. Thanks, Jack.</p>
+				<p class="ie-notification">Hi Internet Explorer user. I haven't completely forgotten about you but until I get time to hack my lovely site for your outdated browser, things will look a bit strange. If you want to try a better browser, there are <a href="http://browsehappy.com/">lots to choose from</a>. Thanks, Jack.</p>
 			<![endif]-->
 
 		</div>
