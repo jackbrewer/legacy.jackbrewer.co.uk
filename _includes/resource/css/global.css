@@ -323,6 +323,6 @@ section .pagination .archive {
 	        transition: color .4s ease;
 }
 
-#error-404:hover header:before {
+#error-404 header:hover:before {
 	color: #fff;
 }
