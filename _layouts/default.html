@@ -31,7 +31,6 @@
 
 		<!-- Quick fix so IE can join the HTML5 party -->
 		<script>
-			document.createElement('section');
 			var html5Elements = ['article' 'aside', 'footer', 'header', 'hgroup', 'nav', 'section', 'time'];
 			for (var i = 0; i < html5Elements.length; i++) {
 				document.createElement(html5Elements[i]);
@@ -67,14 +66,14 @@
 	<body class={{ page.section }}>{% else%}
 	<body>{% endif %}
 
-		<div id="container">
+		<div class="container">
 
-			<!-- Header -->
-			<header id="main-header">
+			<!-- Main Header -->
+			<header class="main-header">
 				<h1><a href="/">Jack Brewer</a></h1>
 				<nav>
 {% include content/pagination.html %}
-					<ul class="nav-social">
+					<ul class="nav nav-social">
 						<li class="nav-github"><a href="https://github.com/jackbrewer" title="GitHub">GitHub</a></li>
 						<li class="nav-twitter"><a href="http://twitter.com/jackbrewer" title="Twitter">Twitter</a></li>
 						<li class="nav-rss"><a href="http://feeds.feedburner.com/JackBrewer" title="RSS">RSS</a></li>
@@ -84,7 +83,7 @@
 
 {{ content }}
 
-			<footer id="main-footer">
+			<footer class="main-footer">
 				<p>&copy; {{ site.time | date: '%Y'}} Jack Brewer / <a href="https://github.com/jackbrewer">GitHub</a> / <a href="https://twitter.com/jackbrewer">Twitter</a></p>
 			</footer>
 
@@ -130,7 +129,7 @@
 
 		<!-- A simple ajax call to a hit counter that lights an arduino LED on my desk -->
 		<script>
-			$.ajax('http://downloads.jackbrewer.co.uk/arduino/trigger.php');
+			// $.ajax('http://downloads.jackbrewer.co.uk/arduino/trigger.php');
 		</script>
 
 	</body>
