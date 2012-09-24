@@ -9,6 +9,21 @@ layout: nil
 
 {% include resource/css/base.css %}
 
+/* Generic Content */
+{% include resource/css/buttons.css %}
+{% include resource/css/icons.css %}
+
+/* Structural */
+{% include resource/css/container.css %}
+{% include resource/css/main-header.css %}
+{% include resource/css/main-navigation.css %}
+
+/* Specific Content */
+{% include resource/css/social-links.css %}
+
+
+{% comment %}
+
 {% include resource/css/layout.css %}
 
 {% include resource/css/global.css %}
@@ -18,3 +33,5 @@ layout: nil
 {% include resource/css/archive.css %}
 
 {% include resource/css/media.css %}
+
+{% endcomment %}

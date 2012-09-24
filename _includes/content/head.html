@@ -1,0 +1,62 @@
+  <head>
+
+    <!--
+
+    Welcome to my website. If you are reading this then I'm guessing you're curious
+    about how things have been done around here. I've tried to keep the source tidy
+    and well commented so feel free to poke around.
+
+    If you've got any questions or comments:
+    twitter.com/jackbrewer
+    github.com/jackbrewer
+
+    Enjoy!
+    Jack.
+
+    -->
+    {% if page.section == 'home' %}
+    <title>Jack Brewer - Perfect pixels and awesome code</title>
+    {% elsif page.title %}<title>{{ page.title }} / Jack Brewer</title>{% endif %}
+    <meta charset="utf-8" />
+    <meta name="description" content="Jack Brewer - Web developer and designer, CSS experimenter." />
+    <meta name="keywords"    content="Jack Brewer, web development, web design, CSS3, HTML5" />
+    <meta name="author"      content="Jack Brewer - http://jackbrewer.co.uk">
+    <meta name="viewport"    content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable"          content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="google-site-verification"              content="XWQ7RJmaCzLVmWrBelBdp7M2YRD68DTeSU-tkoPA3Z0" />
+
+    <!-- Quick fix so IE can join the HTML5 party -->
+    <script>
+      var html5Elements = ['article', 'aside', 'footer', 'header', 'hgroup', 'nav', 'section', 'time'];
+      for (var i = 0; i < html5Elements.length; i++) {
+        document.createElement(html5Elements[i]);
+      }
+    </script>
+
+    <link rel="shortcut icon" href="/resource/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/resource/images/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-startup-image" href="/resource/images/apple-startup-640x920.png" sizes="640x920" />
+    <link rel="apple-touch-startup-image" href="/resource/images/apple-startup-640x1096.png" sizes="640x1096" />
+    <!-- <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="apple-startup-640x1116.png"> -->
+
+    <!-- CSS -->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/resource/css/style.css" />
+    <!--<![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/resource/css/minimal.css" />
+    <![endif]-->
+    <link rel="stylesheet" href="/resource/js/google-code-prettify/prettify.css" />
+    {% if paginator.posts %}<!-- Post Specific Styles -->{% for post in paginator.posts %}
+    <link rel="stylesheet" href="/assets{{post.url}}css/header.css" />{% if post.stylesheets %}{% for stylesheet in post.stylesheets %}
+    <link rel="stylesheet" href="/assets{{post.url}}css/{{stylesheet}}" />{% endfor %}{% endif %}{% if post.extStylesheets %}{% for extStylesheet in post.extStylesheets %}
+    <link rel="stylesheet" href="{{ extStylesheet }}" />{% endfor %}{% endif %}{% endfor %}{% elsif page.url %}
+    <!-- Page Specific Style -->
+    <link rel="stylesheet" href="/assets{{page.url}}css/header.css" />{% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
+    <link rel="stylesheet" href="/assets{{page.url}}css/{{stylesheet}}" />{% endfor %}{% endif %}{% endif %}{% if page.extStylesheets %}{% for extStylesheet in page.extStylesheets %}
+    <link rel="stylesheet" href="{{ extStylesheet }}" />{% endfor %}{% endif %}
+    <!-- Google Fonts API -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+  </head>
