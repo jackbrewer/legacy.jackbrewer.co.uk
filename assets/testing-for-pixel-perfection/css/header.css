@@ -1,5 +1,5 @@
 /* OSX Cursors PSD */
-#testing-for-pixel-perfection header {
+.testing-for-pixel-perfection header {
 	background-image: url('../images/develop.png'), url('../images/design.jpg');
 	background-position: 0% -80%, 100% 20%;
 	background-repeat: no-repeat;
@@ -10,11 +10,11 @@
 	        transition: background-position .6s ease;
 }
 
-#testing-for-pixel-perfection header:hover {
+.testing-for-pixel-perfection header:hover {
 	background-position: 50% 50%;
 }
 
 @media only screen and (max-width: 480px) {
-	#testing-for-pixel-perfection header {
+	.testing-for-pixel-perfection header {
 	}
 }

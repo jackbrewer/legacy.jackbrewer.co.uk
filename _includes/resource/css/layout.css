@@ -4,7 +4,7 @@
  * ===================================
  */
 
-#container {
+.container {
 	position: relative;
 	max-width: 960px;
 	margin: 0 auto;
@@ -12,7 +12,7 @@
 }
 
 /* White page fade overlays */
-#container:after {
+.container:after {
 	content: "";
 	position: fixed;
 	bottom: 0;
@@ -33,7 +33,7 @@
 	Header
 ----------*/
 
-#main-header {
+.main-header {
 	position: fixed;
 	top: 20px;
 	left: auto;
@@ -48,11 +48,11 @@
 	        transition: height 0.2s ease;
 }
 
-#main-header:hover {
+.main-header:hover {
 	height: 170px;
 }
 
-#main-header h1 {
+.main-header h1 {
 	margin-bottom: 0;
 	font-size: 20px;
 	line-height: 22px;
@@ -65,7 +65,7 @@
 	z-index:1;
 }
 
-#main-header h1 a {
+.main-header h1 a {
 	color: #fff;
 	text-transform: uppercase;
 	height: 100px;
@@ -89,8 +89,8 @@
 	        transition: opacity 0.2s ease;
 }
 
-/*#main-header:hover h1 a,*/
-#main-header h1 a.active {
+/*.main-header:hover h1 a,*/
+.main-header h1 a.active {
 	opacity: 1 !important;
 }
 
@@ -99,7 +99,7 @@
 	Navigation
 --------------*/
 
-#main-header nav {
+.main-header nav {
 	position: absolute;
 	margin-top: 2px;
 	bottom: 0px;
@@ -107,24 +107,24 @@
 	z-index: 0;
 }
 
-#main-header ul {
+.main-header ul {
 	padding: 0;
 	margin: 0;
 }
 
-#main-header li {
+.main-header li {
 	float: left;
 	padding: 0;
 	margin: 0 2px 2px 0;
 	background-color: #fff;
 }
 
-#main-header li:nth-child(3n) {
+.main-header li:nth-child(3n) {
 	margin-right: 0;
 }
 
-#main-header li a,
-#main-header li span {
+.main-header li a,
+.main-header li span {
 	position: relative;
 	display: block;
 	width: 32px;
@@ -135,26 +135,26 @@
 	color: #bbb;
 }
 
-#main-header li a {
+.main-header li a {
 	opacity: 0.6;
 }
 
-#main-header li a:hover {
+.main-header li a:hover {
 	opacity: 1;
 }
 
-#main-header .button.disabled {
+.main-header .button.disabled {
 	opacity: 0.2;
 }
 
-#main-header .nav-social li,
-#main-header .nav-social a {
+.main-header .nav-social li,
+.main-header .nav-social a {
 	background-image: url("../images/sprite.png");
 	background-repeat: no-repeat;
 	background-size: 96px auto;
 }
 
-#main-header .nav-social a {
+.main-header .nav-social a {
 	opacity: 0;
 	-webkit-transition: opacity 0.5s ease;
 	   -moz-transition: opacity 0.5s ease;
@@ -163,7 +163,7 @@
 	        transition: opacity 0.5s ease;
 }
 
-#main-header .nav-social a:hover {
+.main-header .nav-social a:hover {
 	opacity: 1;
 	-webkit-transition: opacity 0.2s ease;
 	   -moz-transition: opacity 0.2s ease;

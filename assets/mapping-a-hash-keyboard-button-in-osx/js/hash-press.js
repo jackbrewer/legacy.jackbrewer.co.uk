@@ -1,14 +1,12 @@
 (function(){
-	$(document.body).bind('keydown', function(event) {
-		if (event.which == 192) {
-			event.preventDefault();
-			$('#mapping-a-hash-keyboard-button-in-osx header').addClass('keypress');
-		}
+	$(document.body).bind('keydown keyup', function(event) {
+		toggleKey();
 	});
-	$(document.body).bind('keyup', function(event) {
-		if (event.which == 192) {
+
+	function toggleKey() {
+		if (event.which === 192) {
 			event.preventDefault();
-			$('#mapping-a-hash-keyboard-button-in-osx header').removeClass('keypress');
+			$('.mapping-a-hash-keyboard-button-in-osx header').toggleClass('keypress');
 		}
-	});
+	}
 })();

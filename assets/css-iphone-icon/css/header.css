@@ -1,4 +1,4 @@
-#css-iphone-icon header {
+.css-iphone-icon header {
 	background-image: url("../images/iphone-lock.png"), url("../images/iphone-home.png"), url("/assets/generic/images/osx-linen.png");
 	background-position: 50% 40%, 160% 40%, 50% 50%;
 	background-repeat: no-repeat, no-repeat, repeat;
@@ -15,6 +15,6 @@
 	        transition: background-position .6s cubic-bezier(.41,.26,.48,1.14);
 }
 
-#css-iphone-icon header:hover {
+.css-iphone-icon header:hover {
 	background-position: -60% 40%, 50% 40%, 0% 50%;
 }

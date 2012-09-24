@@ -1,5 +1,5 @@
 /* OSX Cursors PSD */
-#why-impratical-css-experiments-are-useful header {
+.why-impratical-css-experiments-are-useful header {
 	background-image: url('../images/alphabet.gif');
 	background-position: 50% 0%;
 	-webkit-transition: background-position .6s ease;
@@ -9,12 +9,12 @@
 	        transition: background-position .6s ease;
 }
 
-#why-impratical-css-experiments-are-useful header:hover {
+.why-impratical-css-experiments-are-useful header:hover {
 	background-position: 50% 100%;
 }
 
 @media only screen and (max-width: 480px) {
-	#why-impratical-css-experiments-are-useful header {
+	.why-impratical-css-experiments-are-useful header {
 		background-size: 100% auto;
 	}
 }

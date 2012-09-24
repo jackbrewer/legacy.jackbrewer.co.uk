@@ -1,5 +1,5 @@
 /* OSX Cursors PSD */
-#osx-cursors-psd header {
+.osx-cursors-psd header {
 	position: relative;
 	background-image: url('../images/bg.png');
 	background-repeat: repeat;
@@ -10,11 +10,11 @@
 	     -o-transition: background-position 0.3s ease;
 	        transition: background-position 0.3s ease;
 }
-#osx-cursors-psd header:hover {
+.osx-cursors-psd header:hover {
 	background-position: -260% 70%;
 }
 
-#osx-cursors-psd header:after {
+.osx-cursors-psd header:after {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -28,16 +28,16 @@
 	background-repeat: no-repeat;
 }
 
-#osx-cursors-psd header:hover:after {
+.osx-cursors-psd header:hover:after {
 	background-position: 0px 0px;
 }
 
 
 @media only screen and (max-width: 480px) {
-	#osx-cursors-psd header {
+	.osx-cursors-psd header {
 		background-size: 416px auto;
 	}
-	#osx-cursors-psd header:after {
+	.osx-cursors-psd header:after {
 		background-size: 128px auto;
 		background-position: -68px 0px;
 		height: 96px;

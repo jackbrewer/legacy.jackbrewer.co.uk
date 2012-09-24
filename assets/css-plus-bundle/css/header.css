@@ -1,4 +1,4 @@
-#css-plus-bundle header {
+.css-plus-bundle header {
 	background-image: url('../images/sublime.png'), url('../images/margin-sprite.png'), url('../../generic/images/bg-osx.jpg');
 	background-size: 810px 420px, 160px 320px, 1000px auto;
 	background-position: 150px 0, 271px 167px, 30% 100%;
@@ -26,7 +26,7 @@
 	        animation-iteration-count: infinite;
 }
 
-#css-plus-bundle header:hover {
+.css-plus-bundle header:hover {
 	-webkit-animation-name: margin-tabs;
 	   -moz-animation-name: margin-tabs;
 	    -ms-animation-name: margin-tabs;
@@ -56,8 +56,8 @@
 
 /* Landscape iPhone and smaller */
 @media only screen and (max-width: 480px) {
-	#css-plus-bundle header,
-	#css-plus-bundle header:hover {
+	.css-plus-bundle header,
+	.css-plus-bundle header:hover {
 		background-position: 50px 0, 110px 44px, 30% 100%;
 		background-size: 405px auto, 81px auto, 500px auto;
 		-webkit-animation-name: none;

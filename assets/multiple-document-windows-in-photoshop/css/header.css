@@ -1,4 +1,4 @@
-#multiple-document-windows-in-photoshop header {
+.multiple-document-windows-in-photoshop header {
 	background-image: url('../images/toolbox.png'), url('../images/window-small.png'), url('../images/window-large.png'), url('../images/bg.jpg');
 	background-size: 59px 376px, 178px 198px, 526px 405px, 32px 32px;
 	background-position: 7% 30px, 97% 140px, 50% 50px, 0% 0%;
@@ -11,13 +11,13 @@
 	box-shadow: 0 -25px 50px rgba(0, 0, 0, .2) inset;
 }
 
-#multiple-document-windows-in-photoshop header:hover {
+.multiple-document-windows-in-photoshop header:hover {
 	background-position: 7% 40px, 97% 30px, 50% 10px, 0% -5%;
 }
 
 /* Landscape iPhone and smaller */
 @media only screen and (max-width: 480px) {
-	#multiple-document-windows-in-photoshop header {
+	.multiple-document-windows-in-photoshop header {
 		background-size: 29.5px auto, 89px auto, 263px auto, 16px auto;
 		background-position: 7% 40px, 97% 50px, 50% 10px, 0% -5%;
 	}

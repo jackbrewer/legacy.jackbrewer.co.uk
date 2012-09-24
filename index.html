@@ -4,10 +4,10 @@ title : Posts
 section: home
 ---
 
-			<section id="posts">
+			<section class="posts">
 				{% for post in paginator.posts %}
 				<!-- {{ post.title }} -->
-				<article id="{{ post.url | remove: '/' }}">
+				<article class="{{ post.url | remove: '/' }}">
 					<header>
 						<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 						<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%A %d %B %Y" }}</time>

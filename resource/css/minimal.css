@@ -11,14 +11,14 @@ layout: nil
 
 {% include resource/css/base.css %}
 
-#container {
+.container {
 	position: relative;
 	width: 960px;
 	margin: 0 auto;
 	padding: 100px 20px 60px;
 }
 
-#main-header li,
+.main-header li,
 .pagination li {
 	margin: 0;
 	padding: 0;

@@ -201,14 +201,14 @@ section [class*="icon-"] {
 	border-color: transparent transparent transparent #fff;
 }
 
-#main-header .icon-newer:after {
+.main-header .icon-newer:after {
 	top: 8px;
 	left: 8px;
 	border-width: 8px 16px 8px 0;
 	border-color: transparent #888 transparent transparent;
 }
 
-#main-header .icon-older:after {
+.main-header .icon-older:after {
 	top: 8px;
 	left: 8px;
 	border-width: 8px 0 8px 16px;
@@ -233,8 +233,8 @@ section [class*="icon-"] {
 	top: 27px;
 }
 
-#main-header .icon-archive:before,
-#main-header .icon-archive:after {
+.main-header .icon-archive:before,
+.main-header .icon-archive:after {
 	border-color: #888;
 	width: 18px;
 	left: 7px;
@@ -243,7 +243,7 @@ section [class*="icon-"] {
 	top: 7px;
 }
 
-#main-header .icon-archive:after {
+.main-header .icon-archive:after {
 	top: 17px;
 }
 
@@ -301,11 +301,11 @@ section .pagination .archive {
 	Error Pages
 ---------------*/
 
-#error-404 header {
+.error-404 header {
 	background-color: #000;
 }
 
-#error-404 header:before {
+.error-404 header:before {
 	content: "404";
 	position: absolute;
 	top: 0;
@@ -323,6 +323,6 @@ section .pagination .archive {
 	        transition: color .4s ease;
 }
 
-#error-404 header:hover:before {
+.error-404 header:hover:before {
 	color: #fff;
 }

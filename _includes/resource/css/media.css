@@ -10,8 +10,8 @@
 
 @media only screen and (max-width: 768px) {
 
-	#container,
-	#main-header {
+	.container,
+	.main-header {
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -31,7 +31,7 @@
 		margin-right: 20px;
 	}
 
-	#error-404 header:before {
+	.error-404 header:before {
 		font-size: 230px;
 		line-height: 270px;
 	}
@@ -45,16 +45,16 @@
 
 @media only screen and (max-width: 480px) {
 
-	#container {
+	.container {
 		padding-bottom: 20px;
 		padding-top: 10px;
 	}
 
-	#container:after {
+	.container:after {
 		display: none;
 	}
 
-	#main-header {
+	.main-header {
 		position: static;
 		margin-bottom: 20px;
 		margin-left: 10px;
@@ -62,11 +62,11 @@
 		height: 66px;
 	}
 
-	#main-header:hover {
+	.main-header:hover {
 		height: 66px;
 	}
 
-	#main-header h1 {
+	.main-header h1 {
 		float: left;
 		font-size: 12px;
 		line-height: 14px;
@@ -74,13 +74,13 @@
 		background-image: url("../images/jb-logo-x2.png");
 	}
 
-	#main-header h1 a {
+	.main-header h1 a {
 		width: 66px;
 		height: 66px;
 		padding-top: 32px;
 	}
 
-	#main-header nav {
+	.main-header nav {
 		float: right;
 		position: static;
 		display: block;
@@ -137,26 +137,26 @@
 		margin-bottom: 20px;
 	}
 
-	#archive li {
+	.archive li {
 		margin-bottom: 1em;
 		margin-left: 10px;
 	}
 
-	#archive time {
+	.archive time {
 		float: none;
 		width: auto;
 		font-size: 0.875em;
 	}
 
-	#archive time span {
+	.archive time span {
 		font-size: 1em;
 	}
 
-	#archive h2 {
+	.archive h2 {
 		font-size: 1.875em;
 	}
 
-	#error-404 header:before {
+	.error-404 header:before {
 		font-size: 140px;
 		line-height: 170px;
 	}

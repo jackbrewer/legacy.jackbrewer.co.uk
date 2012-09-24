@@ -4,17 +4,17 @@
  * ======================================
  */
 
-#archive {
+.archive {
 	padding: 0 0 60px;
 }
 
-#archive li {
+.archive li {
 	list-style: none;
 	margin-bottom: 1.5em;
 	margin-left: 120px;
 }
 
-#archive time {
+.archive time {
 	float: left;
 	width: 60px;
 	margin-top: 5px;
@@ -29,7 +29,7 @@
 	        transition: color .4s ease;
 }
 
-#archive a:hover time {
+.archive a:hover time {
 	color: #333;
 	-webkit-transition: color .2s ease;
 	   -moz-transition: color .2s ease;
@@ -38,12 +38,12 @@
 	        transition: color .2s ease;
 }
 
-#archive time span {
+.archive time span {
 	font-size: 18px;
 	line-height: 18px;
 }
 
-#archive h2 {
+.archive h2 {
 	display: table;
 	font-size: 2.375em;
 	line-height: 1em;
