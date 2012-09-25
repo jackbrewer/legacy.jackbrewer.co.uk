@@ -1,0 +1,62 @@
+.example {
+  padding: 10px;
+  margin-bottom: 1.5em;
+  overflow: auto;
+}
+
+.note {
+  text-align: center;
+  font-size: 0.875em;
+  font-weight: 400;
+}
+
+.references {
+  font-size: 0.875em;
+}
+
+/* Sorry - negative margins on the <li>s require this clearfix */
+.references:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.references li {
+  float: left;
+  clear: left;
+  border-radius: 1px;
+  margin: -1px -3px;
+  padding: 1px 3px;
+}
+
+.references li:target {
+  background-color: #f5f5f5;
+  -webkit-animation: highlight-fade 3s 1 ease;
+     -moz-animation: highlight-fade 3s 1 ease;
+      -ms-animation: highlight-fade 3s 1 ease;
+       -o-animation: highlight-fade 3s 1 ease;
+          animation: highlight-fade 3s 1 ease;
+}
+
+@-webkit-keyframes highlight-fade {
+  0%, 100% { background-color: #f5f5f5; }
+  1%, 50% { background-color: #ddd; }
+}
+@-moz-keyframes highlight-fade {
+  0%, 100% { background-color: #f5f5f5; }
+  1%, 50% { background-color: #ddd; }
+}
+@-ms-keyframes highlight-fade {
+  0%, 100% { background-color: #f5f5f5; }
+  1%, 50% { background-color: #ddd; }
+}
+@-o-keyframes highlight-fade {
+  0%, 100% { background-color: #f5f5f5; }
+  1%, 50% { background-color: #ddd; }
+}
+@keyframes highlight-fade {
+  0%, 100% { background-color: #f5f5f5; }
+  1%, 50% { background-color: #ddd; }
+}

@@ -1,0 +1,92 @@
+/*
+ * posts-content.css
+ * Styles for blog posts and general post content
+ * ==============================================
+ */
+
+
+
+.post-content {
+  clear: both;
+  border-bottom: 1px dotted #bbb;
+  margin: 0 10px 40px 10px;
+}
+
+.post-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1.5em;
+}
+
+.post-content .actions {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.post-content .actions a {
+  margin-right: 3px;
+}
+
+
+/*--------------------------
+  iPad and larger
+----------------------------*/
+@media only screen and (min-width: 481px) {
+
+  .post-content {
+    margin-left: 120px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+  }
+
+  .post-content .actions {
+    text-align: left;
+  }
+
+  .float-left {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  /* Very basic grid */
+  .col-1 {
+    width: 8.333%;
+  }
+  .col-2 {
+    width: 16.666%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.333%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+
+}
+
+
+/*-----------------------------
+  iPhone and larger
+-------------------------------*/
+@media only screen and (min-width: 769px) {
+
+  .post-content {
+    margin-right: 120px;
+    margin-bottom: 80px;
+    padding-bottom: 50px;
+  }
+
+}

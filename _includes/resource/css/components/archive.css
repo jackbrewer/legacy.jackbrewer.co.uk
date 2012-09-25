@@ -1,0 +1,76 @@
+/*
+ * archive.css
+ * Styles specific to the archive section
+ * ======================================
+ */
+
+.archive-list {
+  padding: 0 0 60px;
+}
+
+.archive-list li {
+  list-style: none;
+  margin-bottom: 1em;
+  margin-left: 10px;
+}
+
+.archive-list time {
+  font-size: 0.875em;
+  margin-top: 5px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #ccc;
+  -webkit-transition: color .4s ease;
+     -moz-transition: color .4s ease;
+      -ms-transition: color .4s ease;
+       -o-transition: color .4s ease;
+          transition: color .4s ease;
+}
+
+.archive-list a:hover time {
+  color: #333;
+  -webkit-transition: color .2s ease;
+     -moz-transition: color .2s ease;
+      -ms-transition: color .2s ease;
+       -o-transition: color .2s ease;
+          transition: color .2s ease;
+}
+
+.archive-list time span {
+  font-size: 1em;
+}
+
+.archive-list h2 {
+  display: table;
+  line-height: 1em;
+  font-size: 1.875em;
+}
+
+
+/*------------------------*\
+  Portrait iPad and larger
+\*------------------------*/
+@media only screen and (min-width: 481px) {
+
+  .archive-list li {
+    list-style: none;
+    margin-bottom: 1.5em;
+    margin-left: 120px;
+  }
+
+  .archive-list time {
+    float: left;
+    width: 60px;
+    font-size: 12px;
+  }
+
+  .archive-list time span {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .archive-list h2 {
+    font-size: 2.375em;
+  }
+
+}

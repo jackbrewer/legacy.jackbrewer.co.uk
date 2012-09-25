@@ -17,7 +17,7 @@
 @media only screen and (min-width: 481px) {
 
   .container {
-    padding: 20px 20px 60px;
+    padding: 20px 0 60px;
   }
 
   /* White page fade overlays */
@@ -35,6 +35,17 @@
     background-image:     -ms-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.6));
     background-image:      -o-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.6));
     background-image:         linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.6));
+  }
+
+}
+
+/*------------------------*\
+  Landscape iPad and larger
+\*------------------------*/
+@media only screen and (min-width: 768px) {
+
+  .container {
+    padding: 20px 20px 60px;
   }
 
 }

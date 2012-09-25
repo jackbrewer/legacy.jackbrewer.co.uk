@@ -1,0 +1,50 @@
+/*-------------
+  Error Pages
+---------------*/
+
+.error-404 header {
+  background-color: #000;
+}
+
+.error-404 header:before {
+  content: "404";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #222;
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 170px;
+  -webkit-transition: color .4s ease;
+     -moz-transition: color .4s ease;
+      -ms-transition: color .4s ease;
+       -o-transition: color .4s ease;
+          transition: color .4s ease;
+}
+
+.error-404 header:hover:before {
+  color: #fff;
+}
+
+
+/*------------------------*\
+  Portrait iPad and larger
+\*------------------------*/
+@media only screen and (min-width: 481px) {
+  .error-404 header:before {
+    font-size: 230px;
+    line-height: 270px;
+  }
+}
+
+/*------------------------*\
+  Landscape iPad and larger
+\*------------------------*/
+@media only screen and (min-width: 787px) {
+  .error-404 header:before {
+    font-size: 300px;
+    line-height: 340px;
+  }
+}

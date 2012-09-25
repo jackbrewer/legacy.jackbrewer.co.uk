@@ -7,31 +7,26 @@ layout: nil
  Individual files can be found in the _includes folder on GitHub
  */
 
-{% include resource/css/base.css %}
+/* Basic Stuff */
+{% include resource/css/foundations/base.css %}
 
 /* Generic Content */
-{% include resource/css/buttons.css %}
-{% include resource/css/icons.css %}
+{% include resource/css/components/buttons.css %}
+{% include resource/css/components/icons.css %}
 
 /* Structural */
-{% include resource/css/container.css %}
-{% include resource/css/main-header.css %}
-{% include resource/css/main-navigation.css %}
+{% include resource/css/structure/container.css %}
+{% include resource/css/structure/main-header.css %}
+{% include resource/css/structure/main-navigation.css %}
+{% include resource/css/structure/main-footer.css %}
 
 /* Specific Content */
-{% include resource/css/social-links.css %}
+{% include resource/css/components/social-links.css %}
+{% include resource/css/components/pagination.css %}
 
+{% include resource/css/components/posts.css %}
+{% include resource/css/components/posts-content.css %}
+{% include resource/css/components/content-layout.css %}
 
-{% comment %}
-
-{% include resource/css/layout.css %}
-
-{% include resource/css/global.css %}
-
-{% include resource/css/posts.css %}
-
-{% include resource/css/archive.css %}
-
-{% include resource/css/media.css %}
-
-{% endcomment %}
+{% include resource/css/components/archive.css %}
+{% include resource/css/components/error.css %}

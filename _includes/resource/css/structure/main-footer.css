@@ -1,0 +1,14 @@
+/*--------
+  Footer
+----------*/
+
+.main-footer {
+  clear: left;
+  color: #555;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.main-footer p {
+  margin-bottom: 0;
+}
