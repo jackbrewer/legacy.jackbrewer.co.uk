@@ -1,0 +1,7 @@
+server: true
+auto: true
+
+paginate: 5
+permalink: /:title/
+
+destination: ../site

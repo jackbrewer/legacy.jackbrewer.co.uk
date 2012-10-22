@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="old-ie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
+  <head>
+
+    <!--
+
+    Welcome to my website. If you are reading this then I'm guessing you're curious
+    about how things have been done around here. I've tried to keep the source tidy
+    and well commented so feel free to poke around.
+
+    If you've got any questions or comments:
+    twitter.com/jackbrewer
+    github.com/jackbrewer
+
+    Enjoy!
+    Jack.
+
+    -->
+    <title>CSS iPhone Icon / Jack Brewer</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Jack Brewer - Web developer and designer, CSS experimenter." />
+    <meta name="keywords"    content="Jack Brewer, web development, web design, CSS3, HTML5" />
+    <meta name="author"      content="Jack Brewer - http://jackbrewer.co.uk">
+    <meta name="viewport"    content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable"          content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="google-site-verification"              content="XWQ7RJmaCzLVmWrBelBdp7M2YRD68DTeSU-tkoPA3Z0" />
+
+    <!-- Quick fix so IE can join the HTML5 party -->
+    <script>
+      var html5Elements = ['article', 'aside', 'footer', 'header', 'hgroup', 'nav', 'section', 'time'];
+      for (var i = 0; i < html5Elements.length; i++) {
+        document.createElement(html5Elements[i]);
+      }
+    </script>
+
+    <link rel="shortcut icon" href="/resource/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/resource/images/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-startup-image" href="/resource/images/apple-startup-640x920.png" sizes="640x920" />
+    <link rel="apple-touch-startup-image" href="/resource/images/apple-startup-640x1096.png" sizes="640x1096" />
+    <!-- <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="apple-startup-640x1116.png"> -->
+
+    <!-- CSS -->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/resource/css/style.css" />
+    <!--<![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/resource/css/minimal.css" />
+    <![endif]-->
+    <link rel="stylesheet" href="/resource/js/google-code-prettify/prettify.css" />
+    
+    <!-- Page Specific Style -->
+    <link rel="stylesheet" href="/assets/css-iphone-icon/css/header.css" />
+    <link rel="stylesheet" href="http://demos.jackbrewer.co.uk/css-iphone-icon/css/iphone.css" />
+    <!-- Google Fonts API -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+  </head>
+
+	
+	<body>
+
+		<div class="container">
+
+			<!-- Main Header -->
+			<header class="main-header">
+				<h1><a href="/">Jack Brewer</a></h1>
+				<div class="main-navigation">
+					<nav class="pagination">
+						
+						<ul>
+							<li class="newer">
+								<a class="button button-icon icon-newer" href="/css-plus-bundle/" title="Newer Post: CSS+ TextMate and Sublime Text Bundle">Newer Post: CSS+ TextMate and Sublime Text Bundle</a>
+							</li>
+							<li class="archive">
+								<a class="button button-icon icon-archive" href="/archive/">Archive</a>
+							</li>
+							<li class="older">
+								<a class="button button-icon icon-older" href="/multiple-document-windows-in-photoshop/" title="Older Post: Multiple Document Windows In Photoshop">Older Post: Multiple Document Windows In Photoshop</a>
+							</li>
+						</ul>
+					</nav>
+          <nav class="social-links">
+            <ul>
+              <li class="social-github">
+                <a class="button button-icon" href="https://github.com/jackbrewer" title="GitHub">GitHub</a>
+              </li>
+              <li class="social-twitter">
+                <a class="button button-icon" href="http://twitter.com/jackbrewer" title="Twitter">Twitter</a>
+              </li>
+              <li class="social-rss">
+                <a class="button button-icon" href="http://feeds.feedburner.com/JackBrewer" title="RSS">RSS</a>
+              </li>
+            </ul>
+          </nav>
+				</div>
+			</header>
+
+			<section class="post">
+
+				<!-- CSS iPhone Icon -->
+				<article class="css-iphone-icon">
+					<header>
+						<h1><span class="post-title">CSS iPhone Icon</span></h1>
+						<time datetime="2012-03-12">Monday 12 March 2012</time>
+					</header>
+					<div class="post-content">
+
+<p>This is the result of a long evening playing with box shadows and gradients &mdash; an iPhone icon made with CSS.</p>
+<div class="example">
+	<span class="iphone">iPhone</span>
+</div>
+<p class="note">Make sure you hover for yet more outrageously complicated styling.</p>
+<p>You've probably seen similar experiments where people have used hundreds of empty <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements to recreate similar details to a pixel perfect level. I decided to take a different approach and write my optimal HTML first.</p>
+<pre class="prettyprint"><code class="html">&lt;span class="iphone"&gt;iPhone&lt;/span&gt;</code></pre>
+<p>That's all there is! Although limiting, I still managed to achieve a fairly impressive result using this one element and its <code>:before</code> and <code>:after</code> pseudo elements. The <code>&lt;span&gt;</code> element itself forms the iPhone body, the <code>:after</code> pseudo element handles the lock / home screen whilst the <code>:before</code> pseudo element forms the home button.</p>
+<p>The bulk of the styling makes use of multiple background gradients, sizes and positions. Combine that with the fact that every CSS3 property is duplicated 5 times with various vendor prefixes and the overall CSS file length of 200 lines doesn't seem too crazy.</p>
+<div class="example float-right col-4">
+	<span class="iphone zoom">iPhone</span>
+</div>
+<p>Here is the exact same icon, this time scaled up three times to allow you to see the finer details (or lack of).</p>
+<p>There is a tiny amount of JavaScript in use on this demo &mdash; it updates the <code>:after</code> pseudo element's <code>content</code> property to ensure the icon is always displaying the correct time.</p>
+<p>You may also notice at this zoom level that the icon is modelled on an iPhone 3GS &mdash; this demo has been living on my hard drive for a while!</p>
+<p><strong>Disclaimer:</strong> This is an experiment and was a great learning experience. I would never recommend using something this complicated or pointless on an actual site.</p>
+<p class="actions">
+	<a href="http://demos.jackbrewer.co.uk/css-iphone-icon" class="button icon-demo">Demo</a>
+	<a href="https://github.com/jackbrewer/demos/tree/gh-pages/css-iphone-icon" class="button icon-source">Source</a>
+</p>
+
+					</div><!-- .post-content -->
+				</article>
+
+					<nav class="pagination">
+						
+						<ul>
+							<li class="newer">
+								<a class="button button-icon icon-newer" href="/css-plus-bundle/" title="Newer Post: CSS+ TextMate and Sublime Text Bundle">Newer Post: CSS+ TextMate and Sublime Text Bundle</a>
+							</li>
+							<li class="archive">
+								<a class="button button-icon icon-archive" href="/archive/">Archive</a>
+							</li>
+							<li class="older">
+								<a class="button button-icon icon-older" href="/multiple-document-windows-in-photoshop/" title="Older Post: Multiple Document Windows In Photoshop">Older Post: Multiple Document Windows In Photoshop</a>
+							</li>
+						</ul>
+					</nav>
+
+			</section>
+
+			<footer class="main-footer">
+				<p>&copy; 2012 Jack Brewer / <a href="https://github.com/jackbrewer">GitHub</a> / <a href="https://twitter.com/jackbrewer">Twitter</a></p>
+			</footer>
+
+			<!-- A TEMPORARY Internet Explorer notice -->
+			<!--[if lt IE 9]>
+				<p class="ie-notification">Hi Internet Explorer user. I haven't completely forgotten about you but until I get time to hack my lovely site for your outdated browser, things will look a bit strange. If you want to try a better browser, there are <a href="http://browsehappy.com/">lots to choose from</a>. Thanks, Jack.</p>
+			<![endif]-->
+
+		</div>
+
+		<!-- jQuery via CDN - local fallback -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>if (typeof jQuery === 'undefined') { document.write('<script src="/resource/js/jquery-1.7.1.js" />'); }</script>
+
+		<!-- General Scripts -->
+		<script src="/resource/js/google-code-prettify/prettify.js"></script>
+		<script src="/resource/js/google-code-prettify/lang-css.js"></script>
+		<script>
+			(function(){
+				prettyPrint();
+			})();
+		</script>
+		
+		<!-- Page Specific Script -->
+		<script src="http://demos.jackbrewer.co.uk/css-iphone-icon/js/iphone.js"></script>
+		<!-- Google Analytics -->
+		<script>
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-18082762-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+
+		<!-- A simple ajax call to a hit counter that lights an arduino LED on my desk -->
+		<script>
+			// $.ajax('http://downloads.jackbrewer.co.uk/arduino/trigger.php');
+		</script>
+
+	</body>
+</html>

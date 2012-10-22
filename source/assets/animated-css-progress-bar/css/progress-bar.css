@@ -1,0 +1,77 @@
+/* Grey Wrapping Bar */
+[role="progressbar"] {
+	position: relative;
+	width: 400px; /* Use this value when setting background-size on :after */
+	height: 20px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	border-radius: 10px;
+	background-color: #ccc;
+	-webkit-box-shadow: 0 0 1px #aaa, 0 0px 1px 1px #ccc, 0 1px 2px 1px #fff, 0 -1px 2px 1px #aaa;
+	   -moz-box-shadow: 0 0 1px #aaa, 0 0px 1px 1px #ccc, 0 1px 2px 1px #fff, 0 -1px 2px 1px #aaa;
+	    -ms-box-shadow: 0 0 1px #aaa, 0 0px 1px 1px #ccc, 0 1px 2px 1px #fff, 0 -1px 2px 1px #aaa;
+	     -o-box-shadow: 0 0 1px #aaa, 0 0px 1px 1px #ccc, 0 1px 2px 1px #fff, 0 -1px 2px 1px #aaa;
+	        box-shadow: 0 0 1px #aaa, 0 0px 1px 1px #ccc, 0 1px 2px 1px #fff, 0 -1px 2px 1px #aaa;
+}
+
+/* Coloured Progress Bar */
+[role="progressbar"]:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	height: 20px;
+	width: 0%;
+	max-width: 100%;
+	min-width: 5%;
+	border-radius: 20px;
+	background-color: #8be543; /* Fallback Colour */
+
+	/* First Gradient: Horizontal white to transparent gloss effect
+	 * Second Gradient: Vertical striped gradient to empgasise movement
+	 * Third Gradient: Progress colours - from red, through orange and yellow, to green
+	 */
+	background-image:
+	  -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 45%, rgba(255,255,255,0) 55%),
+	  -webkit-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
+	  -webkit-linear-gradient(left, #e54343 0%, #e56543 15%, #e59743 41%, #e5db43 67%, #8be543 90%);
+	background-image:
+	     -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 45%, rgba(255,255,255,0) 55%),
+	     -moz-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
+	     -moz-linear-gradient(left, #e54343 0%, #e56543 15%, #e59743 41%, #e5db43 67%, #8be543 90%);
+	background-image:
+	      -ms-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 45%, rgba(255,255,255,0) 55%),
+	      -ms-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
+	      -ms-linear-gradient(left, #e54343 0%, #e56543 15%, #e59743 41%, #e5db43 67%, #8be543 90%);
+	background-image:
+	       -o-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 45%, rgba(255,255,255,0) 55%),
+	       -o-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
+	       -o-linear-gradient(left, #e54343 0%, #e56543 15%, #e59743 41%, #e5db43 67%, #8be543 90%);
+	background-image:
+	          linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 45%, rgba(255,255,255,0) 55%),
+	          linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
+	          linear-gradient(left, #e54343 0%, #e56543 15%, #e59743 41%, #e5db43 67%, #8be543 90%);
+
+	background-size:
+	  auto,
+	  16px auto,
+	  4400px 14px; /* (.progress-bar width x 10) + .progress-bar width */
+
+	background-position:
+	  0 0,
+	  -50% 0,
+	  -1000% 0;
+
+	-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.5) inset, 0px -1px 0px rgba(0,0,0,.1) inset;
+	   -moz-box-shadow: 0px 1px 0px rgba(255,255,255,.5) inset, 0px -1px 0px rgba(0,0,0,.1) inset
+	    -ms-box-shadow: 0px 1px 0px rgba(255,255,255,.5) inset, 0px -1px 0px rgba(0,0,0,.1) inset
+	     -o-box-shadow: 0px 1px 0px rgba(255,255,255,.5) inset, 0px -1px 0px rgba(0,0,0,.1) inset
+	        box-shadow: 0px 1px 0px rgba(255,255,255,.5) inset, 0px -1px 0px rgba(0,0,0,.1) inset
+
+	-webkit-transition: width 3s .5s ease-in-out;
+	   -moz-transition: width 3s .5s ease-in-out;
+	    -ms-transition: width 3s .5s ease-in-out;
+	     -o-transition: width 3s .5s ease-in-out;
+	        transition: width 3s .5s ease-in-out;
+}

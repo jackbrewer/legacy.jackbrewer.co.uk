@@ -1,0 +1,10 @@
+.mapping-a-hash-keyboard-button-in-osx header {
+	background-image: url('../images/key.png'), url('../images/bg.jpg');
+	background-position: 63% 32%, 63% 32%;
+	background-repeat: no-repeat, repeat;
+	background-size: 960px auto, auto auto;
+}
+
+.mapping-a-hash-keyboard-button-in-osx header.keypress {
+	background-position: 63% 34%, 63% 32%;
+}

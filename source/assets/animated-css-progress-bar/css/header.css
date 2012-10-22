@@ -1,0 +1,61 @@
+.animated-css-progress-bar header {
+	background-image:
+	  -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 40%, rgba(255,255,255,0) 45%),
+	  -webkit-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
+	  -webkit-linear-gradient(left, #e54343 0%, #e56543 15%, #e59743 41%, #e5db43 67%, #8be543 90%);
+	background-image:
+	     -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 40%, rgba(255,255,255,0) 45%),
+	     -moz-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
+	     -moz-linear-gradient(left, #e54343 0%, #e56543 15%, #e59743 41%, #e5db43 67%, #8be543 90%);
+	background-image:
+	      -ms-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 40%, rgba(255,255,255,0) 45%),
+	      -ms-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
+	      -ms-linear-gradient(left, #e54343 0%, #e56543 15%, #e59743 41%, #e5db43 67%, #8be543 90%);
+	background-image:
+	       -o-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 40%, rgba(255,255,255,0) 45%),
+	       -o-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
+	       -o-linear-gradient(left, #e54343 0%, #e56543 15%, #e59743 41%, #e5db43 67%, #8be543 90%);
+	background-image:
+	          linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(255,255,255,.2) 40%, rgba(255,255,255,0) 45%),
+	          linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0.1) 100%),
+	          linear-gradient(left, #e54343 0%, #e56543 15%, #e59743 41%, #e5db43 67%, #8be543 90%);
+	background-size: 100% 100%, 100px 100%, 8800px 420px;
+	background-position: 0 0, 0 0, 0 0;
+	background-repeat: repeat;
+	-webkit-transition: background-position 2s ease;
+	   -moz-transition: background-position 2s ease;
+	    -ms-transition: background-position 2s ease;
+	     -o-transition: background-position 2s ease;
+	        transition: background-position 2s ease;
+}
+.animated-css-progress-bar header:hover {
+	background-position: 0 0, 100% 0 ,100% 0;
+}
+
+/* Landscape iPhone and smaller */
+@media only screen and (max-width: 480px) {
+	.animated-css-progress-bar header {
+		background-size: 100% 100%, 50px 100%, 4400px 210px;
+	}
+}
+
+/* Hard coded widths for additional example progress bars */
+
+[role="progressbar"][data-value] {
+	margin-bottom: 20px;
+}
+[role="progressbar"][data-value="0"]:after {
+	width: 0%;
+}
+[role="progressbar"][data-value="25"]:after {
+	width: 25%;
+}
+[role="progressbar"][data-value="50"]:after {
+	width: 50%;
+}
+[role="progressbar"][data-value="75"]:after {
+	width: 75%;
+}
+[role="progressbar"][data-value="100"]:after {
+	width: 100%;
+}

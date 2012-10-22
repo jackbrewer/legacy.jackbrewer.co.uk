@@ -1,0 +1,107 @@
+/* line 1, ../../../_sass/components/content-layout.scss */
+.example {
+  padding: 10px;
+  margin-bottom: 1.5em;
+  overflow: auto;
+}
+
+/* line 7, ../../../_sass/components/content-layout.scss */
+.note {
+  text-align: center;
+  font-size: 0.875em;
+  font-weight: 400;
+}
+
+/* line 13, ../../../_sass/components/content-layout.scss */
+.references {
+  font-size: 0.875em;
+}
+
+/* Sorry - negative margins on the <li>s require this clearfix */
+/* line 18, ../../../_sass/components/content-layout.scss */
+.references:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 26, ../../../_sass/components/content-layout.scss */
+.references li {
+  float: left;
+  clear: left;
+  border-radius: 1px;
+  margin: -1px -3px;
+  padding: 1px 3px;
+}
+
+/* line 34, ../../../_sass/components/content-layout.scss */
+.references li:target {
+  background-color: #f5f5f5;
+  -webkit-animation: highlight-fade 3s 1 ease;
+  -moz-animation: highlight-fade 3s 1 ease;
+  -ms-animation: highlight-fade 3s 1 ease;
+  -o-animation: highlight-fade 3s 1 ease;
+  animation: highlight-fade 3s 1 ease;
+}
+
+@-webkit-keyframes highlight-fade {
+  /* line 44, ../../../_sass/components/content-layout.scss */
+  0%, 100% {
+    background-color: #f5f5f5;
+  }
+
+  /* line 45, ../../../_sass/components/content-layout.scss */
+  1%, 50% {
+    background-color: #ddd;
+  }
+}
+
+@-moz-keyframes highlight-fade {
+  /* line 48, ../../../_sass/components/content-layout.scss */
+  0%, 100% {
+    background-color: #f5f5f5;
+  }
+
+  /* line 49, ../../../_sass/components/content-layout.scss */
+  1%, 50% {
+    background-color: #ddd;
+  }
+}
+
+@-ms-keyframes highlight-fade {
+  /* line 52, ../../../_sass/components/content-layout.scss */
+  0%, 100% {
+    background-color: #f5f5f5;
+  }
+
+  /* line 53, ../../../_sass/components/content-layout.scss */
+  1%, 50% {
+    background-color: #ddd;
+  }
+}
+
+@-o-keyframes highlight-fade {
+  /* line 56, ../../../_sass/components/content-layout.scss */
+  0%, 100% {
+    background-color: #f5f5f5;
+  }
+
+  /* line 57, ../../../_sass/components/content-layout.scss */
+  1%, 50% {
+    background-color: #ddd;
+  }
+}
+
+@keyframes highlight-fade {
+  /* line 60, ../../../_sass/components/content-layout.scss */
+  0%, 100% {
+    background-color: #f5f5f5;
+  }
+
+  /* line 61, ../../../_sass/components/content-layout.scss */
+  1%, 50% {
+    background-color: #ddd;
+  }
+}
