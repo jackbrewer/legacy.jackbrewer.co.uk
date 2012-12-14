@@ -1,0 +1,40 @@
+---
+layout: default
+title : Articles
+section: home
+---
+
+			<section class="articles">
+				{% for post in paginator.posts %}
+				<!-- {{ post.title }} -->
+				<article class="article {{ post.url | remove: '/' }}">
+					<div class="centering article-content">
+						<header>
+							<h1 class="article-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+							<time class="article-time" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%A %d %B %Y" }}</time>
+						</header>
+{% if post.postSummary %}{{ post.postSummary }}
+<p class="actions">
+	<a href="{{ post.url }}#more" class="button">Read More</a>
+</p>
+{% else %}
+	{{ post.content }}
+	{% if post.actions %}
+	<ul class="actions">
+		{% for action_split in post.actions %}
+			{% for action in action_split %}
+				<li><a href="{{ action[1] }}" class="button icon-{{ action[0] }}">{{ action[0] | replace:'-',' ' | capitalize }}</a></li>
+			{% endfor %}
+		{% endfor %}
+	</ul>
+	{% endif %}
+{% endif %}
+					</div><!-- .article-content -->
+				</article>
+				{% endfor %}
+
+				<nav class="pagination">
+{% include content/pagination.html %}
+				</nav>
+
+			</section>

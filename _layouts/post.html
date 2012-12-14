@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+			<section class="">
+
+				<!-- {{ page.title }} -->
+				<article class="article {{ page.url | remove: '/' }}">
+
+					<div class="centering article-content">
+
+						<header>
+							<h1 class="article-title"><span>{{ page.title }}</span></h1>
+							<time class="article-time" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%A %d %B %Y" }}</time>
+						</header>
+
+{{ page.content | markdownify }}
+
+					</div><!-- .article-content -->
+				</article>
+
+{% include content/pagination.html %}
+
+			</section>

@@ -1,0 +1,11 @@
+{
+  "name": "jackbrewer.co.uk",
+  "version": "0.0.0",
+  "dependencies": {
+    "stylus": "git://github.com/LearnBoost/stylus.git",
+    "nib": "~0.8"
+  },
+  "scripts": {
+    "watch": "node_modules/.bin/stylus -c -I node_modules/nib/lib -w _stylus/index.styl -o resource/css"
+  }
+}

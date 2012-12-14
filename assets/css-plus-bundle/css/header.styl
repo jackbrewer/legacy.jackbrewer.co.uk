@@ -1,0 +1,41 @@
+.css-plus-bundle
+  .example
+    width 100%
+    height 400px
+    background-image url('../images/sublime.png'), url('../images/margin-sprite.png'), url('../../generic/images/bg-osx.jpg')
+    background-size 810px 420px, 160px 320px, 1000px auto
+    background-position 150px 0, 271px 167px, 30% 100%
+    background-repeat no-repeat, no-repeat, repeat
+    animation-name idle
+    animation-duration 1s
+    animation-timing-function steps(2)
+    animation-iteration-count infinite
+
+    &:hover
+      animation-name margin-tabs
+      animation-iteration-count 1
+      animation-fill-mode forwards
+      animation-timing-function steps(15)
+      animation-duration 4s
+
+
+// Landscape iPhone and smaller
+@media only screen and (max-width 480px)
+  .example
+    &
+    &:hover
+      background-position 50px 0, 110px 44px, 30% 100%
+      background-size 405px auto, 81px auto, 500px auto
+      animation-name none
+
+@keyframes idle
+  0%
+    background-position 150px 0, 271px 167px, 30% 100%
+  100%
+    background-position 150px 0, 271px 127px, 30% 100%
+
+@keyframes margin-tabs
+  0%
+    background-position 150px 0, 271px 167px, 30% 100%
+  100%
+    background-position 150px 0, 271px -133px, 30% 100%
